@@ -22,7 +22,7 @@ const globalStyles = ({ addBase, config }) => {
       transition: '0.2s ease',
     },
     'a:hover': {
-      borderColor: config('theme.borderColor.primary'),
+      borderColor: config('theme.borderColor.accent'),
     },
     p: {
       marginBottom: config('theme.margin.3'),

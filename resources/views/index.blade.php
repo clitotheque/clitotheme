@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('fullpage')
+  @include('partials.home-screen')
+@endsection
+
 @section('content')
   @include('partials.page-header')
 
