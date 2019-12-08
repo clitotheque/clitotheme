@@ -52,7 +52,9 @@ module.exports = {
       accent: '#e2a50e',
       primary: '#000000',
       white: '#fff',
+      
       gray: {
+        0:   '#d1d1d1',
         100: '#f7fafc',
         200: '#edf2f7',
         300: '#e2e8f0',
@@ -72,6 +74,14 @@ module.exports = {
       center: true,
       padding: '1rem',
     },
+    extend: {
+      inset: {
+        '2/3': '66%',
+      },
+      opacity: {
+        90: '0.90',
+      }
+    }
   },
   variants: {
     // Define variants
