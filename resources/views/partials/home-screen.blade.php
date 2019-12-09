@@ -1,8 +1,19 @@
-<div class="flex relative justify-center items-center w-screen h-screen z-50 bg-topo">
+<div class="relative justify-center  w-screen h-screen z-30 bg-topo">
   {{-- Background --}}
-  <div class="absolute w-full h-full z-0 bg-tr"></div>
-  <div class="absolute w-2/3 left-0 h-full z-10 bg-accent opacity-90"></div>
-  <div class="absolute left-2/3 transX-m66 z-20">
-    <input type="text" placeholder="Rechercher..." class="main-search" />
+  <div class="absolute full bg-tr"></div>
+  <div class="absolute full lg:w-2/3  left-0">
+    <div class="absolute full bg-accent opacity-90"></div>
+    <div class="flex flex-col items-center justify-evenly full z-40">
+      <div class="w-2/3 z-40"><img width="100%" src="@asset('images/temp_logo.svg')" /></div>
+      <div class="z-40 overflow-hidden w-4/5 lg:w-2/3 rounded">
+        <div>
+          <input type="text" placeholder="Rechercher un contenu..." class="main-search w-full" />
+        </div>
+        <div class="flex flex-row flex-wrap z-40">
+          <input type="button" value="Proposer un contenu" class="btn-home" />
+          <input type="button" value="Découvrir les contenus" class="btn-home" />
+        </div>
+      </div>
+  </div>
   </div>
 </div>

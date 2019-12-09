@@ -22,6 +22,10 @@
 }
 
 .main-search {
-  @apply border-solid border border-gray-0 rounded text-4xl bg-white p-3;
-  width: 45rem;
+  @apply border-none border border-gray-0;
+  @apply text-4xl bg-white p-3;
+
+  &:focus {
+    @apply outline-none;
+  }
 }

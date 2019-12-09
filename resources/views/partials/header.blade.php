@@ -1,4 +1,4 @@
-<header class="banner fixed w-screen z-50 p-4 bg-white">
+<header class="banner fixed w-screen z-10 p-4 bg-white">
   <div class="">
     <a class="brand inline-block" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
     <nav class="nav-primary inline-block">
