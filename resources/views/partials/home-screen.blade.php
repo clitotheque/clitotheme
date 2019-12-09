@@ -4,7 +4,7 @@
   <div class="absolute full lg:w-2/3  left-0">
     <div class="absolute full bg-accent opacity-90"></div>
     <div class="flex flex-col items-center justify-evenly full z-40">
-      <div class="w-2/3 z-40"><img width="100%" src="@asset('images/temp_logo.svg')" /></div>
+      <div class="w-full md:w-4/5 xl:w-3/2 z-40"><img width="100%" src="@asset('images/temp_logo.svg')" /></div>
       <div class="z-40 overflow-hidden w-4/5 lg:w-2/3 rounded">
         <div>
           <input type="text" placeholder="Rechercher un contenu..." class="main-search w-full" />
