@@ -4,6 +4,17 @@
  */
 @tailwind base;
 
+/**
+ * Custom fonts
+ */
+//thin 100 -> bold 700 
+@font-face {
+  font-family: 'Palanquin';
+  font-weight: 100;
+  src: url(../fonts/palanquin/Palanquin-Thin.ttf);
+}
+
+
 /** Import variables */
 @import "common/variables";
 
@@ -17,7 +28,6 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-
 /**
  * This injects any component classes registered by Tailwind plugins.
  */

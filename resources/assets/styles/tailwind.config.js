@@ -29,12 +29,19 @@ const globalStyles = ({ addBase, config }) => {
       lineHeight: config('theme.lineHeight.normal'),
     },
     'h1, h2, h3, h4, h5': {
+      fontFamily: config('theme.fontFamily.title'),
       marginBottom: config('theme.margin.2'),
       lineHeight: config('theme.lineHeight.tight'),
     },
-    h1: { fontSize: config('theme.fontSize.5xl') },
-    h2: { fontSize: config('theme.fontSize.4xl') },
-    h3: { fontSize: config('theme.fontSize.3xl') },
+    h1: { 
+      fontSize: config('theme.fontSize.5xl') 
+    },
+    h2: { 
+      fontSize: config('theme.fontSize.4xl') 
+    },
+    h3: { 
+      fontSize: config('theme.fontSize.3xl') 
+    },
     h4: { fontSize: config('theme.fontSize.2xl') },
     h5: { fontSize: config('theme.fontSize.xl') },
     'ol, ul': { paddingLeft: config('theme.padding.4') },
@@ -75,6 +82,9 @@ module.exports = {
       padding: '1rem',
     },
     extend: {
+      fontFamily: {
+        title: 'Palanquin, sans-serif',
+      },
       inset: {
         '2/3': '66%',
       },
