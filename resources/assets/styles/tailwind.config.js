@@ -34,7 +34,7 @@ const globalStyles = ({ addBase, config }) => {
       lineHeight: config('theme.lineHeight.tight'),
     },
     h1: { 
-      fontSize: config('theme.fontSize.5xl') 
+      fontSize: config('theme.fontSize.6xl') 
     },
     h2: { 
       fontSize: config('theme.fontSize.4xl') 
@@ -59,6 +59,7 @@ module.exports = {
       accent: '#e2a50e',
       primary: '#000000',
       white: '#fff',
+      content_1: 'rgb(241,181,145)',
       
       gray: {
         0:   '#d1d1d1',
@@ -90,6 +91,15 @@ module.exports = {
       },
       opacity: {
         90: '0.90',
+      },
+      borderWidth: {
+        '10': '10px',
+        '14': '14px',
+      },
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
       }
     }
   },
