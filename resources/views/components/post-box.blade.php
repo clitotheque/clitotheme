@@ -19,6 +19,6 @@
   <div class="flex-shrink flex-grow p-6">
     <h2>Titre</h2>
     <h3>Sous-titre | XXX | XXX</h3>
-    {{ $slot }}
+    <p>{{ $slot }}</p>
   </div>
 </div>
