@@ -1,10 +1,11 @@
 .btn {
-  @apply bg-primary rounded-sm my-3 px-4 py-3 text-white leading-none;
+  @apply rounded-lg my-3 px-4 py-3 leading-none;
+  @apply font-title uppercase;
 
   transition: 0.2s ease;
 }
 
 .btn-home {
-  @apply btn flex-grow m-0;
-  border-radius: 0;
+  @apply btn bg-primary text-white;
+  @apply text-2xl mx-0 my-4
 }

@@ -9,3 +9,6 @@
       @endif
     </nav>
 </header>
+<div class="fixed top-0 right-0 z-50 mr-4">
+<img width="30px" class="m-5" src="@asset('images/icons/facebook.svg')" />
+</div>
