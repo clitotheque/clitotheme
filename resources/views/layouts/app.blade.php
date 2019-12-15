@@ -1,5 +1,5 @@
 <!doctype html>
-<html {!! get_language_attributes() !!}>
+<html class="text-xs md:text-sm xl:text-base" {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class([
     'bg-dotted',
