@@ -1,4 +1,4 @@
-<header class="banner fixed w-screen h-20 z-10 p-0 bg-white">
+<header class="banner fixed top-0 left-0 w-screen h-20 z-10 p-0 bg-white">
     <a class="brand" href="{{ home_url('/') }}">
       <img class="inline-block h-20" src="@asset('images/temp_logo.svg')" />
       {{-- get_bloginfo('name', 'display') --}}

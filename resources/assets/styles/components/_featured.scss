@@ -1,0 +1,35 @@
+$height: 18rem;
+$width: 23rem;
+$meta-height: 5rem;
+
+.featured-box {
+  @apply relative m-2 bg-accent overflow-hidden;
+  width: $width;
+  height: $height;
+
+
+  &:hover {
+    .featured-meta {
+      top: 0rem;
+    }
+  }
+}
+
+.featured-meta {
+  @apply absolute bottom-0 w-full bg-transp-white;
+  @apply text-primary text-center;
+  top: $height - $meta-height;
+
+  transition: top 0.15s ease-out;
+
+  .meta-head {
+    @apply flex justify-center items-center;
+    height: $meta-height;
+  }
+
+  .meta-description {
+    @apply p-4;
+    height: $height - $meta-height;
+    overflow-y: auto;
+  }
+}
