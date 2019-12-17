@@ -35,7 +35,7 @@ const globalStyles = ({ addBase, config }) => {
       lineHeight: config('theme.lineHeight.tight'),
     },
     h1: { 
-      fontSize: config('theme.fontSize.6xl') 
+      fontSize: config('theme.fontSize.5xl') 
     },
     h2: { 
       fontSize: config('theme.fontSize.4xl') 
