@@ -31,9 +31,11 @@
     <script type="text/javascript">
       var terms_res_types = [
         @php
-        $categories = get_terms('res_types', array(
+        $categories = get_terms(array(
+            'taxonomy' => 'res_types',
             'hide_empty' => false,
-        ) );
+        ));
+        
         foreach($categories as $category) {
           echo "'" .$category->name . "'," ;
         }
