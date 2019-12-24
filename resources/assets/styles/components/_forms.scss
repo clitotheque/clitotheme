@@ -20,19 +20,3 @@
     @apply bg-gray-400;
   }
 }
-
-.main-search {
-  @apply border-none border border-gray-0;
-  @apply text-4xl bg-white p-3;
-
-
-  background-image: url('../images/icons/search.svg');
-  background-repeat: no-repeat;
-  padding-left: 4rem;
-  background-position-y: center;
-  background-position-x: 1rem;
-
-  &:focus {
-    @apply outline-none;
-  }
-}
