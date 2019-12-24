@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
-@section('content')
+@section('main')
   @while(have_posts()) @php the_post() @endphp
     @include('partials.content-single-'.get_post_type())
   @endwhile

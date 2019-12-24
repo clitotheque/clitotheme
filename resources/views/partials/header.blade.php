@@ -1,4 +1,5 @@
-<header class="banner" id="menu">
+<header class="banner-wrapper">
+  <div id="menu" class="banner">
     <a class="brand" href="{{ home_url('/') }}">
       <img class="inline-block h-20" 
       src="@asset('images/temp_logo.svg')" />
@@ -9,6 +10,7 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
+  </div>
 </header>
 
 <div class="inline-block md:hidden fixed w-12 h-12 top-0 right-0 m-4 z-10

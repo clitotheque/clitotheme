@@ -1,4 +1,4 @@
-<div class="relative justify-center  w-screen h-screen z-30 bg-topo">
+<div class="relative md:-mt-20 justify-center w-screen h-screen z-30 bg-topo">
   {{-- Background --}}
   <div class="absolute full bg-tr"></div>
   <div class="absolute full lg:w-2/3  left-0">

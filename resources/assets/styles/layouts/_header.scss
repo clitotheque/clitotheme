@@ -1,8 +1,17 @@
+.banner-wrapper {
+  @apply w-full h-0;
+
+  @screen md {
+    @apply h-20;
+  }
+}
+
 .banner {
   @apply fixed top-0 w-screen h-screen p-0 bg-white z-40;
   right:100%;
 
-  transition: right 0.4s ease-out;
+  transition: right 0.4s ease-out,
+              height 0.4s ease-out;
 
   &.open {
     right: 0;

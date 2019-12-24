@@ -1,25 +1,18 @@
 <!doctype html>
 <html class="overflow-x-hidden text-xs md:text-sm xl:text-base" {!! get_language_attributes() !!}>
+
   @include('partials.head')
+
   <body @php body_class([
     'bg-dotted',
     'bg-fixed',
     'overflow-x-hidden']) @endphp>
+
     @php do_action('get_header') @endphp
     @include('partials.header')
-    @yield('before')
-    <div class="wrap container" role="document">
-      <div class="content p-4">
-        <main class="main">
-          @yield('content')
-        </main>
-        @if (App\display_sidebar())
-          <aside class="sidebar">
-            @include('partials.sidebar')
-          </aside>
-        @endif
-      </div>
-    </div>
+    
+    @yield('main')
+
     @php do_action('get_footer') @endphp
     @include('partials.footer')
 
@@ -35,7 +28,7 @@
             'taxonomy' => 'res_types',
             'hide_empty' => false,
         ));
-        
+
         foreach($categories as $category) {
           echo "'" .$category->name . "'," ;
         }
