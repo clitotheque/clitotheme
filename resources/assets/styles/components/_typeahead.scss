@@ -24,7 +24,7 @@
 
 .tt-menu {
   @apply overflow-x-hidden overflow-y-auto;
-  @apply text-left w-full -mt-2 p-0 bg-white rounded-b;
+  @apply text-left w-full -mt-2 p-0 bg-white rounded-b-lg;
 }
 
 .tt-suggestion {
