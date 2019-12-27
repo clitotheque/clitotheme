@@ -3,3 +3,21 @@
 body.search main form {
   @apply bg-white;
 }
+
+.search-filter-result-item {
+  @apply w-64 h-84 m-4;
+  @apply bg-white;
+
+  .result-header {
+    @apply h-48;
+
+    .result-image {
+      @apply h-32;
+    }
+
+    .result-meta {
+      @apply h-16 text-center;
+      background-color: red;
+    }
+  }
+}
