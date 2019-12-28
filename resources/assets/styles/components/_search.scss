@@ -26,6 +26,10 @@
           background-color: red;
         }
       }
+
+      .result-excerpt {
+        @apply h-16 overflow-y-auto overflow-x-hidden;
+      }
     }
   }
 }

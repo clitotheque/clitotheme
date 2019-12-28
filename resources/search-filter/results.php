@@ -61,7 +61,7 @@ if ( $query->have_posts() )
 					?></h5>
 					</div>
 				</div>
-				
+				<div class="result-excerpt">
 				<p>
 				<?php
 				//https://stackoverflow.com/questions/11434091/add-if-string-is-too-long-php/11434149
@@ -69,7 +69,8 @@ if ( $query->have_posts() )
 					$out = strlen($in) > 50 ? substr($in,0,50)."..." : $in;
 					echo $out;
 				?>
-			</p>
+				</p>
+					</div>
 			</div>
 			
 			<?php
