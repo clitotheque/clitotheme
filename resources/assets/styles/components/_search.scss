@@ -11,24 +11,28 @@
     @apply flex flex-row flex-wrap w-full;
 
     .search-filter-result-item {
-      @apply w-64 h-84 m-4;
+      @apply w-64 m-4;
       @apply bg-white;
 
+      height: 21rem;
+
       .result-header {
-        @apply h-48;
+        height: 12rem;
 
         .result-image {
-          @apply h-32;
+          height: 8rem;
         }
 
         .result-meta {
-          @apply h-16 text-center;
+          @apply text-center;
+          height: 4rem;
           background-color: red;
         }
       }
 
       .result-excerpt {
-        @apply h-16 overflow-y-auto overflow-x-hidden;
+        @apply overflow-y-auto overflow-x-hidden;
+        height: 9rem;
       }
     }
   }
