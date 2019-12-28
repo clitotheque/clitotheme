@@ -61,8 +61,13 @@ if ( $query->have_posts() )
 					</div>
 				</div>
 				
-				<p><?php the_excerpt(); ?>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				<p>
+				<?php
+				//https://stackoverflow.com/questions/11434091/add-if-string-is-too-long-php/11434149
+					$in =  the_excerpt(); 
+					$out = strlen($in) > 50 ? substr($in,0,50)."..." : $in;
+					echo $out;
+				?>
 			</p>
 			</div>
 			
