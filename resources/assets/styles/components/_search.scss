@@ -1,23 +1,31 @@
 /* SEARCH & FILTER styles */
 
-body.search main form {
+.searchandfilter {
   @apply bg-white;
 }
 
-.search-filter-result-item {
-  @apply w-64 h-84 m-4;
-  @apply bg-white;
+.search-filter-results {
+  @apply flex-grow;
 
-  .result-header {
-    @apply h-48;
+  .search-filter-results-list {
+    @apply flex flex-row flex-wrap w-full;
 
-    .result-image {
-      @apply h-32;
-    }
+    .search-filter-result-item {
+      @apply w-64 h-84 m-4;
+      @apply bg-white;
 
-    .result-meta {
-      @apply h-16 text-center;
-      background-color: red;
+      .result-header {
+        @apply h-48;
+
+        .result-image {
+          @apply h-32;
+        }
+
+        .result-meta {
+          @apply h-16 text-center;
+          background-color: red;
+        }
+      }
     }
   }
 }

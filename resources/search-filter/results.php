@@ -52,7 +52,9 @@ if ( $query->have_posts() )
 					<div class="result-meta">
 						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						<h5><?php the_category(); ?>
-						|<?php the_tags(); ?>
+						|<?php 
+						//the_tags(); 
+						?>
 					|<?php 
 					  //the_date(); 
 					?></h5>
