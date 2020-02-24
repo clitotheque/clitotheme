@@ -15,7 +15,7 @@ $r = new App\Data\Resource(get_post());
     <h2>Description</h2>
     {{ the_content() }}
     <h2>Review</h2>
-    {{ the_field('review') }}
+    {!! $r->review !!}
   </div>
   {{--
   <footer>
