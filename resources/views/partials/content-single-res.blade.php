@@ -17,6 +17,7 @@ $r = new App\Data\Resource(get_post());
     <h2>Review</h2>
     {!! $r->review !!}
   </div>
+  {{ var_dump(($r->related)())  }};
   {{--
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
