@@ -11,6 +11,8 @@ class Resource extends ACFPost
   public $review = null;
   public $related = null;
   public $categories = null;
+  public $types = null;
+  public $type_label = null;
 
   function __construct($post) {
     parent::__construct($post);
@@ -62,15 +64,17 @@ class Resource extends ACFPost
     );
     $this->categories = $categories;
 
+    $this->types = wp_get_post_terms($pid, 'res_types');
 
     $this->related = function () {
-      var_dump('pouet');
       return array_map(
         function ($r) {
           return new Resource($r);
         },
       (array) get_field('related_content', $this->p->ID));
     };
+
+    $this->type_label = $this->get_type_label();
   }
 
   function get_categories_html() {
@@ -93,5 +97,29 @@ class Resource extends ACFPost
       $this->creators
     );
     return implode(',&nbsp;', $creators);
+  }
+
+  private function is_prefix($pref, $str) {
+    return substr($str, 0, strlen($pref)) === $pref;
+  }
+
+  private function get_type_label() {
+    $types = array_map(
+      function($t) {
+        return $t->slug;
+      },
+      $this->types
+    );
+
+    $res = 'accent';
+    foreach($types as $key => $type) {
+      if($this->is_prefix('link', $type)) $res = 'accent';
+      else if($this->is_prefix('video', $type)) $res = 'video';
+      else if($this->is_prefix('movie', $type)) $res = 'video';
+      else if($this->is_prefix('yt', $type)) $res = 'video';
+      else if($this->is_prefix('book', $type)) $res = 'book';
+    }
+
+    return $res;
   }
 }
