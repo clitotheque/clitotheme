@@ -15,7 +15,7 @@
 /**
  * Custom fonts
  */
-//thin 100 -> bold 700 
+//thin 100 -> bold 700
 @font-face {
   font-family: 'Palanquin';
   font-weight: 100;
@@ -57,6 +57,7 @@
 @import "components/featured";
 @import "components/search";
 @import "components/typeahead";
+@import "components/title";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

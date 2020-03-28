@@ -12,8 +12,7 @@ $r = new App\Data\Resource(get_post());
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <header class="post-title mb-8">
       <h2>{!! $r->get_creators_html() !!}</h2>
-      <h1 class="entry-title -mt-6">
-        {!! get_the_title() !!}</h1>
+      <h1 class="entry-title title-{{ $r->type_label }} -mt-6">{!! get_the_title() !!}</h1>
       <h6 class="-mt-4 italic">
         {!! $r->get_categories_html() !!}
       </h6>

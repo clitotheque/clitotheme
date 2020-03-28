@@ -61,6 +61,7 @@ module.exports = {
       primary: '#000000',
       white: '#fff',
       video: '#ff003b',
+      book: '#00c791',
 
       gray: {
         0:   '#d1d1d1',
