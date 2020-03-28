@@ -10,6 +10,7 @@ class Resource extends ACFPost
   public $free = null;
   public $review = null;
   public $related = null;
+  public $categories = null;
 
   function __construct($post) {
     parent::__construct($post);
@@ -53,6 +54,15 @@ class Resource extends ACFPost
 
     $this->review = nl2br(htmlspecialchars(get_field('review', $pid)));
 
+    $categories = array_map(
+      function($cid) {
+        return get_category($cid);
+      },
+      wp_get_post_categories($pid)
+    );
+    $this->categories = $categories;
+
+
     $this->related = function () {
       var_dump('pouet');
       return array_map(
@@ -61,5 +71,27 @@ class Resource extends ACFPost
         },
       (array) get_field('related_content', $this->p->ID));
     };
+  }
+
+  function get_categories_html() {
+    $cats = array_map(
+      function ($c) {
+
+        return "<span>$c->name</span>";
+      },
+      $this->categories
+    );
+    return implode('&nbsp;|&nbsp;', $cats);
+  }
+
+  function get_creators_html() {
+    $creators = array_map(
+      function ($c) {
+        $name = htmlspecialchars($c->name);
+        return "<span>$name</span>";
+      },
+      $this->creators
+    );
+    return implode(',&nbsp;', $creators);
   }
 }
