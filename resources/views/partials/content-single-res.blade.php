@@ -4,12 +4,12 @@ $r = new App\Data\Resource(get_post());
 
 @endphp
 <article @php post_class('flex flex-row flex-wrap justify-center bg-white') @endphp>
-  <div class="left-column w-1/4 min p-5">
+  <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0">
     <div class="bg-{{ $r->type_label }} w-full p-5 overflow-hidden">
     {!! get_the_post_thumbnail(null, 'medium_large') !!}
     </div>
   </div>
-  <div class="right-column w-2/4 p-5">
+  <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <header class="post-title mb-8">
       <h2>{!! $r->get_creators_html() !!}</h2>
       <h1 class="entry-title -mt-6">
