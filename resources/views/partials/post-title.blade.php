@@ -8,10 +8,10 @@ if (!isset($post_link)) $post_link = false;
         <a
             href="{!! the_permalink() !!}"
             title="{{ the_title_attribute() }}">
-            {!! get_the_title() !!}
+            {{ get_the_title() }}
         </a>
         @else
-        {!! get_the_title() !!}
+        {{ get_the_title() }}
         @endif
     </h1>
     <h6 class="italic leading-none">

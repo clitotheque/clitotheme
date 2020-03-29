@@ -23,3 +23,10 @@
   min-width: 20rem;
   max-width: 45rem;
 }
+
+.no_link_effect {
+  &:hover{
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}

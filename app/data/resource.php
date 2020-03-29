@@ -89,15 +89,24 @@ class Resource extends ACFPost
     $this->type_label = $this->get_type_label();
   }
 
-  function get_categories_html() {
+  function get_categories_html($no_featured = false) {
     $cats = array_map(
-      function ($c) {
-
+      function ($c) use ($no_featured) {
+        if($no_featured) {
+          $cf = get_category_by_slug('featured');
+          if($c->term_id ===  $cf->term_id) return "";
+        }
         return "<span>$c->name</span>";
       },
       $this->categories
     );
-    return implode('&nbsp;|&nbsp;', $cats);
+    $cats2 = array_filter(
+      $cats,
+      function ($s) {
+        return !($s === "");
+      }
+    );
+    return implode('&nbsp;|&nbsp;', $cats2);
   }
 
   function get_creators_html() {
