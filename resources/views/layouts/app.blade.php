@@ -8,9 +8,11 @@
     'bg-fixed',
     'overflow-x-hidden']) @endphp>
 
+    @yield('before')
+
     @php do_action('get_header') @endphp
     @include('partials.header')
-    
+
     @yield('main')
 
     @php do_action('get_footer') @endphp
@@ -34,7 +36,7 @@
         }
         @endphp
       ];
-    </script> 
+    </script>
 
     @php wp_footer() @endphp
   </body>

@@ -1,8 +1,11 @@
 @extends('layouts.home')
 
-@section('before')
+@section('before-deep')
   @include('partials.home-screen')
-  @include('partials.featured')
+@endsection
+
+@section('featured')
+@include('partials.featured')
 @endsection
 
 @section('content')

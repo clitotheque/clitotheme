@@ -22,13 +22,13 @@
   }
 
   @screen md {
-    @apply right-0 h-20 z-10;
+    @apply relative right-0 h-20 z-10;
   }
 }
 
 .banner .nav {
   @apply list-none p-0 w-full inline-flex flex-wrap;
-  
+
   .menu-item {
     @apply w-full;
   }
