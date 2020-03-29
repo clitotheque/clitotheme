@@ -16,11 +16,10 @@ $r = new App\Data\Resource(get_post());
       <p>{!! $r->review !!}</p>
     </div>
   </div>
-  <!-- {{ var_dump(($r->related)())  }};
   {{--
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
   </footer>
   --}}
-  {{-- @php comments_template('/partials/comments.blade.php') @endphp --}} -->
+  {{-- @php comments_template('/partials/comments.blade.php') @endphp --}}
 </article>

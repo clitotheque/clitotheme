@@ -1,6 +1,6 @@
 @php
     $c = get_category_by_slug('featured');
-    //var_dump($c);
+
     $loop = new WP_Query(array(
         'post_type' => 'res',
         'cat' => pll_get_term($c->term_id),

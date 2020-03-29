@@ -3,8 +3,8 @@
 $r = new App\Data\Resource(get_post());
 global $more;
 $more = 0;
-@endphp
 
+@endphp
 <div class="container flex
     @if ($left)
       flex-row
@@ -20,6 +20,6 @@ $more = 0;
   </div>
   <div class="w-84 flex-shrink-0 flex-grow-100 p-6">
     @include('partials.post-title', ['post_link' => true])
-    <p>{!! get_the_excerpt()!!}</p>
+    <p>{{ the_excerpt() }}</p>
   </div>
 </div>

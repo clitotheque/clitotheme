@@ -6,12 +6,12 @@ if (!isset($post_link)) $post_link = false;
     <h1 class="entry-title title-{{ $r->type_label }} leading-none">
         @if ($post_link)
         <a
-            href="{!! the_permalink() !!}"
+            href="{{ the_permalink() }}"
             title="{{ the_title_attribute() }}">
-            {{ get_the_title() }}
+            {{ the_title() }}
         </a>
         @else
-        {{ get_the_title() }}
+        {{ the_title() }}
         @endif
     </h1>
     <h6 class="italic leading-none">
