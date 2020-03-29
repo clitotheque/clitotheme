@@ -1,9 +1,10 @@
 @php
-    $c = get_category_by_slug('featured');
+    $c = get_category_by_slug('featured-'.pll_current_language('slug'));
+    if(!isset($c)) $c = get_category_by_slug('featured');
 
     $loop = new WP_Query(array(
         'post_type' => 'res',
-        'cat' => pll_get_term($c->term_id),
+        'cat' => $c->term_id,
     ));
 @endphp
 

@@ -93,8 +93,8 @@ class Resource extends ACFPost
     $cats = array_map(
       function ($c) use ($no_featured) {
         if($no_featured) {
-          $cf = get_category_by_slug('featured');
-          if($c->term_id ===  $cf->term_id) return "";
+          $slug = $c->slug;
+          if($this->is_prefix('featured', $slug)) return "";
         }
         return "<span>$c->name</span>";
       },
