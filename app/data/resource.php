@@ -3,16 +3,28 @@ namespace App\Data;
 
 class Resource extends ACFPost
 {
+  /**
+   * @var Creator[] $creators  The creator(s) of the resource
+   * @var bool $ignore_month
+   * @var bool $ignore_day
+   * @var bool $mature          Is content for mature audience only
+   * @var bool $free            Is content free
+   * @var string $review        Review
+   * @var callable $related     Access related resources
+   * @var mixed[] $categories   Categorie(s)
+   * @var mixed[] $types        Type(s)
+   * @var string $type_label    Type identifier string
+   */
   public $creators = null;
-  public $ignore_month = null;
-  public $ignore_day = null;
-  public $mature = null;
-  public $free = null;
-  public $review = null;
+  public $ignore_month = true;
+  public $ignore_day = true;
+  public $mature = false;
+  public $free = true;
+  public $review = '';
   public $related = null;
-  public $categories = null;
-  public $types = null;
-  public $type_label = null;
+  public $categories = [];
+  public $types = [];
+  public $type_label = 'accent';
 
   function __construct($post) {
     parent::__construct($post);
