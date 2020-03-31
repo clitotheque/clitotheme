@@ -26,13 +26,16 @@
         .result-meta {
           @apply text-center;
           height: 4rem;
-          background-color: red;
         }
       }
 
       .result-excerpt {
         @apply overflow-y-auto overflow-x-hidden;
+        @apply p-2;
         height: 9rem;
+        p {
+          text-align: left;
+        }
       }
     }
   }

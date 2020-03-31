@@ -1,6 +1,8 @@
 <?php
 namespace App\Data;
 
+use \Illuminate\Support as IS;
+
 class Resource extends ACFPost
 {
   /**
@@ -89,14 +91,14 @@ class Resource extends ACFPost
     $this->type_label = $this->get_type_label();
   }
 
-  function get_categories_html($no_featured = false) {
+  function get_categories_html($no_featured = false, $max_char = 0, $end = '...') {
     $cats = array_map(
       function ($c) use ($no_featured) {
         if($no_featured) {
           $slug = $c->slug;
-          if($this->is_prefix('featured', $slug)) return "";
+          if(IS\Str::startsWith($slug, 'featured')) return "";
         }
-        return "<span>$c->name</span>";
+        return "$c->name";
       },
       $this->categories
     );
@@ -106,6 +108,31 @@ class Resource extends ACFPost
         return !($s === "");
       }
     );
+
+    if($max_char > 0) {
+      $cut = [];
+      $count = 0;
+
+      foreach($cats2 as $key => $cat_name) {
+        $len = IS\Str::length($cat_name) + 3;
+        if ($count + $len > $max_char) {
+          array_push($cut, $end);
+          break;
+        }
+        array_push($cut, $cat_name);
+        $count += $len;
+      }
+
+      $cats2 = $cut;
+    }
+
+    $cats2 = array_map(
+      function ($c) {
+        return "<span>$c</span>";
+      },
+      $cats2
+    );
+
     return implode('&nbsp;|&nbsp;', $cats2);
   }
 
@@ -120,10 +147,6 @@ class Resource extends ACFPost
     return implode(',&nbsp;', $creators);
   }
 
-  private function is_prefix($pref, $str) {
-    return substr($str, 0, strlen($pref)) === $pref;
-  }
-
   private function get_type_label() {
     $types = array_map(
       function($t) {
@@ -134,11 +157,11 @@ class Resource extends ACFPost
 
     $res = 'accent';
     foreach($types as $key => $type) {
-      if($this->is_prefix('link', $type)) $res = 'accent';
-      else if($this->is_prefix('video', $type)) $res = 'video';
-      else if($this->is_prefix('movie', $type)) $res = 'video';
-      else if($this->is_prefix('yt', $type)) $res = 'video';
-      else if($this->is_prefix('book', $type)) $res = 'book';
+      if(IS\Str::startsWith($type, 'link')) $res = 'accent';
+      else if(IS\Str::startsWith($type, 'video')) $res = 'video';
+      else if(IS\Str::startsWith($type, 'movie')) $res = 'video';
+      else if(IS\Str::startsWith($type, 'yt')) $res = 'video';
+      else if(IS\Str::startsWith($type, 'book')) $res = 'book';
     }
 
     return $res;

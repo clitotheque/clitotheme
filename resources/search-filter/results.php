@@ -1,78 +1,93 @@
 <?php
 /**
- * Search & Filter Pro 
+ * Search & Filter Pro
  *
  * Sample Results Template
- * 
+ *
  * @package   Search_Filter
  * @author    Ross Morsali
  * @link      https://searchandfilter.com
  * @copyright 2018 Search & Filter
- * 
- * Note: these templates are not full page templates, rather 
+ *
+ * Note: these templates are not full page templates, rather
  * just an encaspulation of the your results loop which should
- * be inserted in to other pages by using a shortcode - think 
+ * be inserted in to other pages by using a shortcode - think
  * of it as a template part
- * 
+ *
  * This template is an absolute base example showing you what
- * you can do, for more customisation see the WordPress docs 
- * and using template tags - 
- * 
+ * you can do, for more customisation see the WordPress docs
+ * and using template tags -
+ *
  * http://codex.wordpress.org/Template_Tags
  *
  */
+use \Illuminate\Support as IS;
+
+function clean_cut ($str, $max_char) {
+	$char_cut = IS\Str::substr($str, 0, $max_char);
+	$word_count = count(explode(" ", $char_cut));
+	return IS\Str::words($str, $word_count, '...');
+}
 
 if ( $query->have_posts() )
 {
 	?>
-	
+
 	<!-- Found <?php echo $query->found_posts; ?> Results<br /> -->
 	<div class='search-filter-results-list'>
 	<?php
 		while ($query->have_posts())
 		{
 			$query->the_post();
-			
+			$r = new App\Data\Resource(get_post());
+			$categories = $r->get_categories_html(true, 35);
+			$color = $r->type_label;
+			$bg = " bg-".$color;
+
 			?>
-			<div class='search-filter-result-item'>
+			<div class='
+				search-filter-result-item
+				overflow-hidden
+				border-solid
+				border-4
+				rounded-lg
+				border-<?= $color; ?>
+				'>
 				<div class="result-header">
-					
-				<?php 
+
+				<?php
 						if ( has_post_thumbnail() ) {
 					  ?>
 						<div class="result-image"
-							style="background: url('<?php 
-								the_post_thumbnail_url('small') 
+							style="background: url('<?php
+								the_post_thumbnail_url('small')
 							?>') center / cover"> </div>
 							<?php
 						} else {
 							?> <div class="result-image"></div> <?php
 						}
 						?>
-					<div class="result-meta">
-						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<h5><?php 
+					<div class="result-meta<?= $bg; ?>">
+						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?= clean_cut (get_the_title(), 35); ?></a></h4>
+						<h5><?= $categories;
 						/*
-						 *	List of categories 
+						 *	List of categories
 						 */
-						the_category('&nbsp;|&nbsp;'); 
-						//the_tags(); 
-					  //the_date(); 
+
+						//the_tags();
+					  //the_date();
 					?></h5>
 					</div>
 				</div>
 				<div class="result-excerpt">
 				<p>
-				<?php
-				//https://stackoverflow.com/questions/11434091/add-if-string-is-too-long-php/11434149
-					$in =  the_excerpt(); 
-					$out = strlen($in) > 50 ? substr($in,0,50)."..." : $in;
-					echo $out;
+				<?=
+				clean_cut(get_the_excerpt(), 140);
 				?>
 				</p>
 					</div>
 			</div>
-			
+
 			<?php
 		}
 	?>
