@@ -1,6 +1,6 @@
 @php
     $c = get_category_by_slug('featured-'.pll_current_language('slug'));
-    if(!isset($c)) $c = get_category_by_slug('featured');
+    if(!isset($c) || !$c) $c = get_category_by_slug('featured');
 
     $loop = new WP_Query(array(
         'post_type' => 'res',
