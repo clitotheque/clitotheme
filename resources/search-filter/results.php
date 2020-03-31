@@ -67,16 +67,9 @@ if ( $query->have_posts() )
 							?> <div class="result-image"></div> <?php
 						}
 						?>
-					<div class="result-meta<?= $bg; ?>">
-						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?= clean_cut (get_the_title(), 35); ?></a></h4>
-						<h5><?= $categories;
-						/*
-						 *	List of categories
-						 */
-
-						//the_tags();
-					  //the_date();
-					?></h5>
+					<div class="result-meta<?= $bg; ?> italic">
+						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?= clean_cut (get_the_title(), 20); ?></a></h4>
+						<h6><?= $categories; ?></h6>
 					</div>
 				</div>
 				<div class="result-excerpt">
