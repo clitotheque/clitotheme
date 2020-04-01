@@ -1,7 +1,39 @@
 /* SEARCH & FILTER styles */
 
 .searchandfilter {
+  @apply w-full;
+  @apply p-6;
   @apply bg-white;
+
+  ul {
+    @apply w-full;
+    padding: 0;
+
+    li {
+      @apply w-full;
+
+      label {
+        @apply w-full;
+      }
+    }
+  }
+
+  .sf-input-text {
+    width: 100% !important;
+    @apply p-1 pl-2 pr-2;
+    @apply rounded-md;
+    @apply border-solid border;
+    border-color: #AAA;
+  }
+
+  .chosen-container {
+    width: 100% !important;
+  }
+
+  @screen md {
+    width: 18rem;
+    max-width: 25%;
+  }
 }
 
 .search-filter-results {
