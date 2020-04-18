@@ -1,5 +1,7 @@
 <?php
-namespace App\Data;
+namespace App;
+
+use \Illuminate\Support as IS;
 
 class Tools
 {
@@ -25,4 +27,11 @@ class Tools
       return site_url($nameorid);
     }
   }
+
+
+  public static function clean_cut ($str, $max_char) {
+	$char_cut = IS\Str::substr($str, 0, $max_char);
+	$word_count = count(explode(" ", $char_cut));
+	return IS\Str::words($str, $word_count, '...');
+}
 }

@@ -21,13 +21,6 @@
  * http://codex.wordpress.org/Template_Tags
  *
  */
-use \Illuminate\Support as IS;
-
-function clean_cut ($str, $max_char) {
-	$char_cut = IS\Str::substr($str, 0, $max_char);
-	$word_count = count(explode(" ", $char_cut));
-	return IS\Str::words($str, $word_count, '...');
-}
 
 if ( $query->have_posts() )
 {
@@ -68,14 +61,14 @@ if ( $query->have_posts() )
 						}
 						?>
 					<div class="result-meta<?= $bg; ?> italic">
-						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?= clean_cut (get_the_title(), 20); ?></a></h4>
+						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?= App\Tools::clean_cut (get_the_title(), 20); ?></a></h4>
 						<h6><?= $categories; ?></h6>
 					</div>
 				</div>
 				<div class="result-excerpt">
 				<p>
 				<?=
-				clean_cut(get_the_excerpt(), 140);
+				App\Tools::clean_cut(get_the_excerpt(), 140);
 				?>
 				</p>
 					</div>

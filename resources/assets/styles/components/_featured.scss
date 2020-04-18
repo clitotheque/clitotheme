@@ -1,26 +1,22 @@
 $height: 18rem;
 $width: 23rem;
-$meta-height: 5rem;
+$meta-height: 6rem;
 
 .featured-box {
+  @apply box-border;
   @apply relative m-2 bg-accent overflow-hidden;
   width: $width;
   height: $height;
-
+  box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0);
 
   &:hover {
-    .featured-meta {
-      top: 0rem;
-    }
+    box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 1);
   }
 }
 
 .featured-meta {
   @apply absolute bottom-0 w-full bg-transp-white;
   @apply text-primary text-center;
-  top: $height - $meta-height;
-
-  transition: top 0.15s ease-out;
 
   .meta-head {
     @apply flex justify-center items-center;

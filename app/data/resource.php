@@ -118,7 +118,7 @@ class Resource extends ACFPost
         array_push($cut, $end);
         break;
       }
-      $link = Tools::poly_get_page_link(4);
+      $link = \App\Tools::poly_get_page_link(4);
       $search_param = "_sft_category=$cat->slug";
       array_push($cut, "<span><a href='$link?$search_param'>$cat->name</a></span>");
       $count += $len;
