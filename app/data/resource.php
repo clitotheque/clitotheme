@@ -91,47 +91,40 @@ class Resource extends ACFPost
     $this->type_label = $this->get_type_label();
   }
 
-  function get_categories_html($no_featured = false, $max_char = 0, $end = '...') {
+  function get_categories_html($no_featured = false, $max_char = PHP_INT_MAX, $end = '...') {
     $cats = array_map(
       function ($c) use ($no_featured) {
         if($no_featured) {
           $slug = $c->slug;
-          if(IS\Str::startsWith($slug, 'featured')) return "";
+          if(IS\Str::startsWith($slug, 'featured')) return null;
         }
-        return "$c->name";
+        return $c;
       },
       $this->categories
     );
     $cats2 = array_filter(
       $cats,
       function ($s) {
-        return !($s === "");
+        return !($s === null);
       }
     );
 
-    if($max_char > 0) {
-      $cut = [];
-      $count = 0;
+    $cut = [];
+    $count = 0;
 
-      foreach($cats2 as $key => $cat_name) {
-        $len = IS\Str::length($cat_name) + 3;
-        if ($count + $len > $max_char) {
-          array_push($cut, $end);
-          break;
-        }
-        array_push($cut, $cat_name);
-        $count += $len;
+    foreach($cats2 as $key => $cat) {
+      $len = IS\Str::length($cat->name) + 3;
+      if ($count + $len > $max_char) {
+        array_push($cut, $end);
+        break;
       }
-
-      $cats2 = $cut;
+      $link = Tools::poly_get_page_link(4);
+      $search_param = "_sft_category=$cat->slug";
+      array_push($cut, "<span><a href='$link?$search_param'>$cat->name</a></span>");
+      $count += $len;
     }
 
-    $cats2 = array_map(
-      function ($c) {
-        return "<span>$c</span>";
-      },
-      $cats2
-    );
+    $cats2 = $cut;
 
     return implode('&nbsp;|&nbsp;', $cats2);
   }
