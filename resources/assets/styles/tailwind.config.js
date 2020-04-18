@@ -57,11 +57,13 @@ const globalStyles = ({ addBase, config }) => {
 module.exports = {
   theme: {
     colors: {
-      accent: '#e2a50e',
+      accent: '#E2A50D',
       primary: '#000000',
       white: '#fff',
-      video: '#ff003b',
-      book: '#00c791',
+      video: '#E55428',
+      book: '#2E6EB2',
+      link: '#F3B58D',
+      film: '#F5D8D5',
 
       gray: {
         0:   '#d1d1d1',

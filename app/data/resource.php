@@ -150,11 +150,11 @@ class Resource extends ACFPost
 
     $res = 'accent';
     foreach($types as $key => $type) {
-      if(IS\Str::startsWith($type, 'link')) $res = 'accent';
+      if(IS\Str::startsWith($type, 'movie')) $res = 'film';
       else if(IS\Str::startsWith($type, 'video')) $res = 'video';
-      else if(IS\Str::startsWith($type, 'movie')) $res = 'video';
       else if(IS\Str::startsWith($type, 'yt')) $res = 'video';
       else if(IS\Str::startsWith($type, 'book')) $res = 'book';
+      else if(IS\Str::startsWith($type, 'link')) $res = 'link';
     }
 
     return $res;
