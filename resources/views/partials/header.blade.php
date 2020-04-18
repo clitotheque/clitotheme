@@ -11,7 +11,7 @@
 
 <header class="banner-wrapper">
   <div id="menu" class="banner">
-    <a class="brand" href="{{ home_url('/') }}">
+    <a class="brand" href="{{ pll_home_url() }}">
       <img class="inline-block h-20"
       src="@asset('images/temp_logo.svg')" />
       {{-- get_bloginfo('name', 'display') --}}
