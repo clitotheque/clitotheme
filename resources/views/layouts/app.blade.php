@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="overflow-x-hidden text-xs md:text-sm xl:text-base" {!! get_language_attributes() !!}>
+<html class="text-xs md:text-sm xl:text-base" {!! get_language_attributes() !!}>
 
   @include('partials.head')
 
   <body @php body_class([
     'bg-dotted',
     'bg-fixed',
-    'overflow-x-hidden']) @endphp>
+    'w-full']) @endphp>
 
     @yield('before')
 

@@ -9,8 +9,8 @@
 <img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50" src="@asset('images/icons/menu.svg')" />
 </div>
 
-<header class="banner-wrapper">
-  <div id="menu" class="banner">
+<div id="menu" class="banner-wrapper">
+  <div class="banner">
     <a class="brand" href="{{ pll_home_url() }}">
       <img class="inline-block h-20"
       src="@asset('images/temp_logo.svg')" />
@@ -22,4 +22,4 @@
       @endif
     </nav>
   </div>
-</header>
+</div>
