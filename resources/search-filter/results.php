@@ -22,6 +22,8 @@
  *
  */
 
+use function App\asset_path;
+
 if ( $query->have_posts() )
 {
 	?>
@@ -40,6 +42,7 @@ if ( $query->have_posts() )
 			?>
 			<div class='
 				search-filter-result-item
+				relative
 				overflow-hidden
 				border-solid
 				border-4
@@ -61,7 +64,7 @@ if ( $query->have_posts() )
 						}
 						?>
 					<div class="result-meta<?= $bg; ?> italic">
-						<h4 class="mb-0"><a href="<?php the_permalink(); ?>"><?= App\Tools::clean_cut (get_the_title(), 20); ?></a></h4>
+						<h4 class="mb-0"><?= App\Tools::clean_cut (get_the_title(), 20); ?></h4>
 						<h6><?= $categories; ?></h6>
 					</div>
 				</div>
@@ -71,7 +74,16 @@ if ( $query->have_posts() )
 				App\Tools::clean_cut(get_the_excerpt(), 140);
 				?>
 				</p>
-					</div>
+				</div>
+				<a class="absolute top-0 left-0 w-full h-full
+				bg-<?= $color; ?>"
+					href="<?php the_permalink(); ?>"
+					title="<?php the_title_attribute(); ?>">
+					<img
+					class="w-24 m-auto"
+					src="<?= asset_path('images/icons/eye.svg') ?>"
+					alt="Open content"  />
+				</a>
 			</div>
 
 			<?php
