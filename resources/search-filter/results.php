@@ -76,14 +76,15 @@ if ( $query->have_posts() )
 				?>
 				</p>
 				</div>
-				<a class="absolute top-0 left-0 w-full h-full
-				bg-<?= $color; ?>"
+				<a class="absolute top-0 left-0 w-full h-full"
 					href="<?php the_permalink(); ?>"
 					title="<?php the_title_attribute(); ?>">
+					<span class="filter w-full bg-<?= $color; ?>">
 					<img
 					class="w-24 m-auto"
 					src="<?= asset_path('images/icons/eye.svg') ?>"
 					alt="Open content"  />
+					</span>
 				</a>
 			</div>
 
