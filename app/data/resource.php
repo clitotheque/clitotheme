@@ -91,7 +91,7 @@ class Resource extends ACFPost
     $this->type_label = $this->get_type_label();
   }
 
-  function get_categories_html($no_featured = false, $max_char = PHP_INT_MAX, $end = '...') {
+  function get_categories_html($no_featured = false, $max_char = PHP_INT_MAX, $end = '...', $nolink = false) {
     $cats = array_map(
       function ($c) use ($no_featured) {
         if($no_featured) {
@@ -120,7 +120,12 @@ class Resource extends ACFPost
       }
       $link = \App\Tools::poly_get_page_link(4);
       $search_param = "_sft_category=$cat->slug";
+      if($nolink) {
+      array_push($cut, "<span>$cat->name</span>");
+      } else {
       array_push($cut, "<span><a href='$link?$search_param'>$cat->name</a></span>");
+      }
+
       $count += $len;
     }
 

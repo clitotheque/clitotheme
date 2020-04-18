@@ -35,7 +35,8 @@ if ( $query->have_posts() )
 		{
 			$query->the_post();
 			$r = new App\Data\Resource(get_post());
-			$categories = $r->get_categories_html(true, 35);
+			$categories = $r->get_categories_html(true, 35, '...', true);
+			$title = App\Tools::clean_cut (get_the_title(), 20);
 			$color = $r->type_label;
 			$bg = " bg-".$color;
 
@@ -64,7 +65,7 @@ if ( $query->have_posts() )
 						}
 						?>
 					<div class="result-meta<?= $bg; ?> italic">
-						<h4 class="mb-0"><?= App\Tools::clean_cut (get_the_title(), 20); ?></h4>
+						<h4 class="mb-0"><?= $title ?></h4>
 						<h6><?= $categories; ?></h6>
 					</div>
 				</div>
