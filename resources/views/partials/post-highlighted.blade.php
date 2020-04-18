@@ -9,7 +9,7 @@ $r = new App\Data\Resource(get_post());
     <div class="meta-head">
       <div class="m-auto">
         <h3 class="leading-none">
-            {{!! \App\Tools::clean_cut(get_the_title(), 50) !!}}
+            {!! \App\Tools::clean_cut(get_the_title(), 50) !!}
         </h3>
         {{-- <h6 class="italic leading-none">{!! $r->get_categories_html(true) !!}</h6> --}}
       </div>
