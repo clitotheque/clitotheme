@@ -9,7 +9,12 @@
       </div>
       <div class="z-40 w-4/5 lg:w-2/3">
         <div>
-          <input type="text" placeholder="Rechercher..." class="main-search w-full rounded-lg" />
+          <form method="GET" action="{{ \App\Tools::poly_get_page_link(4) }}">
+          <input type="text"
+          name="_sf_s"
+          placeholder="Rechercher..." class="main-search w-full rounded-lg" />
+          <input type="submit" class="hidden invisible"/>
+        </form>
         </div>
         <div class="flex flex-row flex-wrap justify-around mt-4 z-40">
           <input type="button" value="Proposer un contenu" class="btn-home" />
