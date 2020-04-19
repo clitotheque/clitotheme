@@ -118,12 +118,12 @@ class Resource extends ACFPost
         array_push($cut, $end);
         break;
       }
-      $link = \App\Tools::poly_get_page_link(4);
-      $search_param = "_sft_category=$cat->slug";
       if($nolink) {
-      array_push($cut, "<span>$cat->name</span>");
+        array_push($cut, "<span>$cat->name</span>");
       } else {
-      array_push($cut, "<span><a href='$link?$search_param'>$cat->name</a></span>");
+        $link = \App\Tools::poly_get_page_link(4);
+        $search_param = "_sft_category=$cat->slug";
+        array_push($cut, "<span><a href=\"$link?$search_param\">$cat->name</a></span>");
       }
 
       $count += $len;
@@ -131,18 +131,24 @@ class Resource extends ACFPost
 
     $cats2 = $cut;
 
-    return implode('&nbsp;|&nbsp;', $cats2);
+    return implode('&nbsp;| ', $cats2);
   }
 
-  function get_creators_html() {
+  function get_creators_html($no_link = false) {
     $creators = array_map(
-      function ($c) {
+      function ($c) use ($no_link) {
         $name = htmlspecialchars($c->name);
-        return "<span>$name</span>";
+        if($no_link)
+          return "<span>$name</span>";
+
+        $link = \App\Tools::poly_get_page_link(4);
+        $id = $c->p->ID;
+        $search_param = "_sfm_creator=$id";
+        return "<span><a href=\"$link?$search_param\">$name</a></span>";
       },
       $this->creators
     );
-    return implode(',&nbsp;', $creators);
+    return implode(', ', $creators);
   }
 
   private function get_type_label() {
