@@ -28,6 +28,13 @@ $img_h: 8rem;
     border-color: #AAA;
   }
 
+  [data-sf-field-input-type="radio"] {
+    /* Styles */
+    .sf-label-radio {
+      @apply w-auto;
+    }
+  }
+
   .chosen-container {
     width: 100% !important;
   }
