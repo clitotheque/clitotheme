@@ -1,4 +1,4 @@
-<div class="relative justify-center w-full h-screen z-30 bg-topo">
+<div class="relative justify-center w-full h-screen z-45 bg-topo">
   {{-- Background --}}
   <div class="absolute full bg-tr"></div>
   <div class="absolute full lg:w-2/3  left-0">
@@ -9,7 +9,7 @@
       </div>
       <div class="z-40 w-4/5 lg:w-2/3">
         <div>
-          <form method="GET" action="{{ \App\Tools::poly_get_page_link(4) }}">
+          <form id="main-search" method="GET" action="{{ \App\Tools::poly_get_page_link(4) }}">
           <input type="text"
           name="_sf_s"
           placeholder="Rechercher..." class="main-search w-full rounded-lg" />

@@ -27,12 +27,18 @@
       var terms_res_types = [
         @php
         $categories = get_terms(array(
-            'taxonomy' => 'res_types',
-            'hide_empty' => false,
+            'taxonomy' => 'category',
+            'hide_empty' => true,
         ));
-
+        $types = get_terms(array(
+            'taxonomy' => 'res_types',
+            'hide_empty' => true,
+        ));
         foreach($categories as $category) {
           echo "'" .$category->name . "'," ;
+        }
+        foreach($types as $type) {
+          echo "'" .$type->name . "'," ;
         }
         @endphp
       ];

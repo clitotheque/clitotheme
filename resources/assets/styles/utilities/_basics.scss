@@ -24,6 +24,11 @@
   max-width: 45rem;
 }
 
+
+.z-45 {
+  z-index: 45;
+}
+
 .no_link_effect {
   &:hover{
     text-decoration: none !important;

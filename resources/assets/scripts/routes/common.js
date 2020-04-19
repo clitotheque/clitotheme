@@ -6,7 +6,7 @@ export default {
 
     /* Menu button */
     $('#menu-switch').click(() => $('#menu').toggleClass('open'));
-    
+
     /* Typeahead */
 
     var substringMatcher = function(strs) {
@@ -39,6 +39,10 @@ export default {
     {
       name: 'states',
       source: substringMatcher(terms_res_types)
+    });
+
+    $('.main-search').bind('typeahead:select', function(ev, suggestion) {
+      $('#main-search').submit();
     });
   },
   finalize() {
