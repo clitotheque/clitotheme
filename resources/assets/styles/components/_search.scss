@@ -35,6 +35,13 @@ $img_h: 8rem;
     }
   }
 
+  [data-sf-field-input-type="checkbox"] {
+    /* Styles */
+    .sf-label-checkbox {
+      @apply w-auto;
+    }
+  }
+
   .chosen-container {
     width: 100% !important;
   }
