@@ -31,14 +31,14 @@ $img_h: 8rem;
   [data-sf-field-input-type="radio"] {
     /* Styles */
     .sf-label-radio {
-      @apply w-auto;
+      @apply inline w-auto;
     }
   }
 
   [data-sf-field-input-type="checkbox"] {
     /* Styles */
     .sf-label-checkbox {
-      @apply w-auto;
+      @apply inline w-auto;
     }
   }
 
