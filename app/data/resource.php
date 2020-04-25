@@ -178,4 +178,13 @@ class Resource extends ACFPost
     }
     return null;
   }
+
+  function get_yt_id() {
+    foreach($this->types as $key => $type) {
+      if(IS\Str::startsWith($type->slug, 'yt')) {
+        return get_field('youtube_id', $this->p->ID);
+      }
+    }
+    return null;
+  }
 }
