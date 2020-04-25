@@ -16,6 +16,7 @@ class Resource extends ACFPost
    * @var mixed[] $categories   Categorie(s)
    * @var mixed[] $types        Type(s)
    * @var string $type_label    Type identifier string
+   * @var string $link          External link
    */
   public $creators = null;
   public $ignore_month = true;
@@ -27,6 +28,7 @@ class Resource extends ACFPost
   public $categories = [];
   public $types = [];
   public $type_label = 'accent';
+  public $link = null;
 
   function __construct($post) {
     parent::__construct($post);
@@ -89,6 +91,9 @@ class Resource extends ACFPost
     };
 
     $this->type_label = $this->get_type_label();
+
+
+    $this->link = $this->get_link();
   }
 
   function get_categories_html($no_featured = false, $max_char = PHP_INT_MAX, $end = '...', $nolink = false) {
@@ -169,5 +174,14 @@ class Resource extends ACFPost
     }
 
     return $res;
+  }
+
+  private function get_link() {
+    foreach($this->types as $key => $type) {
+      if(IS\Str::startsWith($type->slug, 'link')) {
+        return get_field('link', $this->p->ID);
+      }
+    }
+    return null;
   }
 }
