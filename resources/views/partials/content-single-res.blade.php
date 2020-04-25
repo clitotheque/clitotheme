@@ -20,7 +20,7 @@ $r = new App\Data\Resource(get_post());
       @if (!empty($r->get_yt_id()))
       <div class="relative overflow-hidden h-0 my-4" style="padding-bottom:56.25%">
       <iframe class="w-full h-full absolute left-0 top-0" id="ytplayer" type="text/html" width="640" height="360"
-  src="http://www.youtube.com/embed/{{ $r->get_yt_id() }}?autoplay=0&modestbranding=1&rel=0&showinfo=0&origin={{ home_url() }}"
+  src="https://www.youtube.com/embed/{{ $r->get_yt_id() }}?autoplay=0&modestbranding=1&rel=0&showinfo=0&origin={{ home_url() }}"
   frameborder="0"></iframe>
       </div>
       @endif
