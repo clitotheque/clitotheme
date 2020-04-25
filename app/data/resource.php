@@ -157,15 +157,9 @@ class Resource extends ACFPost
   }
 
   private function get_type_label() {
-    $types = array_map(
-      function($t) {
-        return $t->slug;
-      },
-      $this->types
-    );
-
     $res = 'accent';
-    foreach($types as $key => $type) {
+    foreach($this->types as $key => $typ) {
+      $type = $typ->slug;
       if(IS\Str::startsWith($type, 'movie')) $res = 'film';
       else if(IS\Str::startsWith($type, 'video')) $res = 'video';
       else if(IS\Str::startsWith($type, 'yt')) $res = 'video';
