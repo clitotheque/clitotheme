@@ -17,7 +17,7 @@ $r = new App\Data\Resource(get_post());
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <div class="entry-content">
       @include('partials.post-title')
-      @if (!is_null($r->link))
+      @if (!is_null($r->get_yt_id()))
       <div class="relative overflow-hidden h-0 my-4" style="padding-bottom:56.25%">
       <iframe class="w-full h-full absolute left-0 top-0" id="ytplayer" type="text/html" width="640" height="360"
   src="http://www.youtube.com/embed/{{ $r->get_yt_id() }}?autoplay=0&modestbranding=1&rel=0&showinfo=0"
