@@ -20,7 +20,7 @@
         @php $url = get_the_post_thumbnail_url($r->p->ID, 'medium_large') @endphp
         @if ($landscape)
             <div
-            class="absolute full top-0 left-0 blurry"
+            class="absolute full top-0 left-0 blurry opacity-75"
             style="background: url('{!! $url !!}') center/cover no-repeat;">&nbsp;</div>
         @endif
         <div
