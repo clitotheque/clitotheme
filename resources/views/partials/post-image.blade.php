@@ -7,14 +7,13 @@
  if ($landscape) $zoom = "130%" //"contain"
 @endphp
 
-<div class="overflow-hidden w-full bg-{{ $r->type_label }}
+<div class="overflow-hidden p-4 w-full bg-{{ $r->type_label }}
     @if ($cover)
         h-full
     @endif
     @if ($landscape)
         landscape
-    @endif
-     p-4 overflow-hidden">
+    @endif ">
     <div class="relative full border-solid border-white border-0 overflow-hidden">
     @if ($cover)
         @php $url = get_the_post_thumbnail_url($r->p->ID, 'medium_large') @endphp
