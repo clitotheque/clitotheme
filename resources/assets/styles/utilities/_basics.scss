@@ -29,6 +29,10 @@
   z-index: 45;
 }
 
+.blurry {
+  filter: blur(8px) saturate(0.7);
+}
+
 .no_link_effect {
   &:hover{
     text-decoration: none !important;

@@ -1,18 +1,31 @@
 @php
  if(!isset($cover)) $cover = false;
+
+ $landscape = $r->img_is_landscape();
+
+ $zoom = "cover";
+ if ($landscape) $zoom = "contain"
 @endphp
 
-<div class="bg-{{ $r->type_label }} w-full
+<div class="overflow-hidden w-full bg-{{ $r->type_label }}
     @if ($cover)
         h-full
     @endif
-    p-5 overflow-hidden">
-    <div class="full border-solid border-white border-4">
+    @if ($landscape)
+        landscape
+    @endif
+     p-4 overflow-hidden">
+    <div class="relative full border-solid border-white border-0 overflow-hidden">
     @if ($cover)
         @php $url = get_the_post_thumbnail_url($r->p->ID, 'medium_large') @endphp
+        @if ($landscape)
+            <div
+            class="absolute full top-0 left-0 blurry"
+            style="background: url('{!! $url !!}') center/cover no-repeat;">&nbsp;</div>
+        @endif
         <div
-            class="full"
-            style="background: url('{!! $url !!}') center/cover no-repeat;"
+            class="absolute full top-0 left-0"
+            style="background: url('{!! $url !!}') center/{{ $zoom }} no-repeat;"
         >&nbsp;</div>
     @else
         {!! get_the_post_thumbnail($r->p->ID, 'medium_large') !!}
