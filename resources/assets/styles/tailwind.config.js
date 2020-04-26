@@ -64,6 +64,7 @@ module.exports = {
       book: '#2E6EB2',
       link: '#F3B58D',
       film: '#F5D8D5',
+      site: '#6c9b8b',
 
       gray: {
         0:   '#d1d1d1',

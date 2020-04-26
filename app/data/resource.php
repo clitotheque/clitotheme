@@ -157,6 +157,7 @@ class Resource extends ACFPost
   }
 
   private function get_type_label() {
+    // TODO logic is wrong
     $res = 'accent';
     foreach($this->types as $key => $typ) {
       $type = $typ->slug;
@@ -164,6 +165,7 @@ class Resource extends ACFPost
       else if(IS\Str::startsWith($type, 'video')) $res = 'video';
       else if(IS\Str::startsWith($type, 'yt')) $res = 'video';
       else if(IS\Str::startsWith($type, 'book')) $res = 'book';
+      else if(IS\Str::startsWith($type, 'site')) $res = 'site';
       else if(IS\Str::startsWith($type, 'link')) $res = 'link';
     }
 
