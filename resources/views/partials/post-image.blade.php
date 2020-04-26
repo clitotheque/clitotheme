@@ -4,7 +4,7 @@
  $landscape = $r->img_is_landscape();
 
  $zoom = "cover";
- if ($landscape) $zoom = "contain"
+ if ($landscape) $zoom = "130%" //"contain"
 @endphp
 
 <div class="overflow-hidden w-full bg-{{ $r->type_label }}
