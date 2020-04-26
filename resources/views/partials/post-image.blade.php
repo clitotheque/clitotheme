@@ -7,7 +7,7 @@
  if ($landscape) $zoom = "130%" //"contain"
 @endphp
 
-<div class="overflow-hidden p-4 w-full bg-{{ $r->type_label }}
+<div class="overflow-hidden p-3 w-full bg-{{ $r->type_label }}
     @if ($cover)
         h-full
     @endif
