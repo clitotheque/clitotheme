@@ -15,7 +15,7 @@ $more = 0;
     my-16
     p-0
     bg-white">
-  <div class="flex-shrink-0 flex-grow w-84 h-96 overflow-hidden">
+  <div class="flex-shrink-0 flex-grow w-84 h-84 overflow-hidden">
     @include('partials.post-image', ['cover' => true])
   </div>
   <div class="w-84 flex-shrink-0 flex-grow-100 p-6">
