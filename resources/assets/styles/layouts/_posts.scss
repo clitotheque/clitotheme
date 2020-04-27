@@ -1,3 +1,17 @@
+.portrait {
+  @apply  w-84;
+}
+
 .landscape {
-  position: static;
+  @apply w-96;
+}
+
+.sat-hover {
+  filter: saturate(0.5);
+  transition: filter 0.15s ease;
+}
+.post-box:hover {
+  .sat-hover {
+    filter: saturate(1);
+  }
 }

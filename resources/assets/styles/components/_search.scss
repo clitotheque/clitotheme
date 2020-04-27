@@ -1,8 +1,9 @@
 /* SEARCH & FILTER styles */
 $res_width: 16rem;
-$res_height: 21rem;
+$res_height: 29rem;
 $load_witdh: 5rem;
-$img_h: 8rem;
+$img_h: 16rem;
+$meta_h: 4rem;
 
 .searchandfilter {
   @apply w-full;
@@ -74,7 +75,7 @@ $img_h: 8rem;
         height: $img_h;
 
         img {
-          padding-top: 1.5rem;
+          padding-top: ($img_h / 2) - ($load_witdh / 2);
         }
       }
 
@@ -87,23 +88,24 @@ $img_h: 8rem;
       }
 
       .result-header {
-        height: 12rem;
+        //height: $img_h + $meta_h;
 
         .result-image {
           height: $img_h;
+          filter: saturate(0.5);
         }
 
         .result-meta {
           @apply overflow-hidden;
           @apply text-center;
-          height: 4rem;
+          height: $meta_h;
         }
       }
 
       .result-excerpt {
         @apply overflow-y-auto overflow-x-hidden;
         @apply p-2;
-        height: 9rem;
+        height: $res_height - ($img_h + $meta_h);
         p {
           text-align: left;
         }

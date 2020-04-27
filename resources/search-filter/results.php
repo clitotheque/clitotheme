@@ -45,9 +45,6 @@ if ( $query->have_posts() )
 				search-filter-result-item
 				relative
 				overflow-hidden
-				border-solid
-				border-4
-				rounded-lg
 				border-<?= $color; ?>
 				'>
 				<div class="result-header">
