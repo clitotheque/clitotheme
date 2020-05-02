@@ -16,14 +16,13 @@
  * Custom fonts
  */
 //thin 100 -> bold 700
-@font-face {
-  font-family: 'Palanquin';
-  font-weight: 100;
-  src: url(../fonts/palanquin/Palanquin-Thin.ttf);
-}
+// @font-face {
+//   font-family: 'Palanquin';
+//   font-weight: 100;
+//   src: url(../fonts/palanquin/Palanquin-Thin.ttf);
+// }
 
-// @font-face {font-family: "GENISO"; src: url("//db.onlinewebfonts.com/t/4aab67e6126386079dc1549704d8d746.eot"); src: url("//db.onlinewebfonts.com/t/4aab67e6126386079dc1549704d8d746.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4aab67e6126386079dc1549704d8d746.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4aab67e6126386079dc1549704d8d746.woff") format("woff"), url("//db.onlinewebfonts.com/t/4aab67e6126386079dc1549704d8d746.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4aab67e6126386079dc1549704d8d746.svg#GENISO") format("svg"); }
-@import url(//db.onlinewebfonts.com/c/4aab67e6126386079dc1549704d8d746?family=GENISO);
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 

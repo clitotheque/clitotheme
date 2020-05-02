@@ -89,7 +89,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'bigtitle': ['GENISO', 'sans-serif'],
+        'bigtitle': ['Dosis', 'sans-serif'],
         'title': ['Open Sans', 'sans-serif'],
         'sans': ['Open Sans', 'sans-serif'],
         'display': ['Open Sans', 'sans-serif'],
