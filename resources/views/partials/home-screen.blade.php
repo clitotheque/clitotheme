@@ -8,17 +8,18 @@
         <img width="100%" src="@asset('images/temp_logo.svg')" />
       </div>
       <div class="z-40 w-4/5 lg:w-2/3">
-        <div>
+        {{-- <div>
           <form id="main-search" method="GET" action="{{ \App\Tools::poly_get_page_link(4) }}">
           <input type="text"
           name="_sf_s"
           placeholder="Rechercher..." class="main-search w-full rounded-lg" />
           <input type="submit" class="hidden invisible"/>
         </form>
-        </div>
-        <div class="flex flex-row flex-wrap justify-around mt-4 z-40">
-          <input type="button" value="Proposer un contenu" class="btn-home" />
-          <input type="button" value="Découvrir les contenus" class="btn-home" />
+        </div> --}}
+        <div class="flex flex-row flex-wrap justify-around z-40">
+          <a href="#"><input type="button" value="Proposer un contenu" class="btn-home flex-grow m-2 p-6" /></a>
+        <a href="{{ App\Tools::poly_get_page_link("search") }}">
+          <input type="button" value="Découvrir les contenus" class="btn-home flex-grow m-2 p-6" /></a>
         </div>
       </div>
   </div>

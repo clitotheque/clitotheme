@@ -1,5 +1,5 @@
 .btn {
-  @apply rounded-lg my-3 px-4 py-3 leading-none;
+  @apply my-3 px-4 py-3 leading-none cursor-pointer;
   @apply font-title uppercase;
 
   transition: 0.2s ease;
