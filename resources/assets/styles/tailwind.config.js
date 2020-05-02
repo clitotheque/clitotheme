@@ -89,7 +89,11 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        title: 'Palanquin, sans-serif',
+        'bigtitle': ['GENISO', 'sans-serif'],
+        'title': ['Open Sans', 'sans-serif'],
+        'sans': ['Open Sans', 'sans-serif'],
+        'display': ['Open Sans', 'sans-serif'],
+        'body': ['Open Sans', 'sans-serif'],
       },
       inset: {
         '2/3': '66%',

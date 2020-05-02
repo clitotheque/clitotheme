@@ -31,6 +31,11 @@
 
 .banner .nav {
   @apply list-none p-0 w-full inline-flex flex-wrap;
+  @apply font-bigtitle;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0.4px 0 0 currentColor;
 
   .menu-item {
     @apply w-full;
