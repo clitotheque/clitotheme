@@ -29,6 +29,7 @@ class Resource extends ACFPost
   public $types = [];
   public $type_label = 'accent';
   public $link = null;
+  public $editor = null;
 
   function __construct($post) {
     parent::__construct($post);
@@ -69,6 +70,8 @@ class Resource extends ACFPost
     $this->mature = get_field('mature', $pid);
 
     $this->free = get_field('free_content', $pid);
+
+    $this->editor = get_field('editor', $pid);
 
     $this->review = nl2br(htmlspecialchars(get_field('review', $pid)));
 

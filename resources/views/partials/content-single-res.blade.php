@@ -5,7 +5,7 @@ $r = new App\Data\Resource(get_post());
 @endphp
 <article @php post_class('flex flex-row flex-wrap justify-center bg-white') @endphp>
   <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0 text-center">
-    @include('partials.post-image')
+    @include('partials.post-image', ['more' => true])
     @if (!empty($r->link))
     <a class="no_link_effect" href="{{ $r->link }}" target="_blank">
     <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
@@ -17,10 +17,8 @@ $r = new App\Data\Resource(get_post());
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <div class="entry-content">
       @include('partials.post-title')
-      <h4 class="underline">Description</h4>
       {{ the_content() }}
-      <h4 class="underline">Notre avis</h4>
-      <p>{!! $r->review !!}</p>
+      <p class="italic text-right">«&nbsp;{!! $r->review !!}&nbsp»</p>
       @if (!empty($r->get_yt_id()))
       <div class="relative overflow-hidden h-0 my-4" style="padding-bottom:56.25%">
       <iframe class="w-full h-full absolute left-0 top-0" id="ytplayer" type="text/html" width="640" height="360"

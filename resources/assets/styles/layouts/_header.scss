@@ -19,32 +19,23 @@
 .banner {
   @apply relative w-full h-full p-0 bg-white;
 
-
-  nav {
-    display: inline-flex;
-  }
-
-  // @screen md {
-
-  // }
-}
-
-.banner .nav {
-  @apply list-none p-0 w-full inline-flex flex-wrap;
-  @apply font-bigtitle;
-  font-size: 1.5em;
-  font-weight: 500;
-  text-transform: uppercase;
-
-  .menu-item {
-    @apply w-full;
-  }
-
-  @screen md {
-    @apply w-auto;
+  .nav {
+    @apply list-none p-0 w-full flex flex-wrap;
+    @apply font-bigtitle;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
 
     .menu-item {
+      @apply w-full;
+    }
+
+    @screen md {
       @apply w-auto;
+
+      .menu-item {
+        @apply w-auto;
+      }
     }
   }
 }
