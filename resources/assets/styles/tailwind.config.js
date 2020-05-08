@@ -88,6 +88,9 @@ module.exports = {
       padding: '1rem',
     },
     extend: {
+      screens: {
+        'xs': '420px',
+      },
       fontFamily: {
         'bigtitle': ['Dosis', 'sans-serif'],
         'title': ['Open Sans', 'sans-serif'],

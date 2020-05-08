@@ -67,11 +67,13 @@ $meta_h: 4rem;
       @apply m-6 flex-grow;
       @apply bg-white;
       width: $res_width;
-      max-width: 1.25 * $res_width;
+      max-width: 1.5 * $res_width;
       height: $res_height;
       animation: slide-up 0.4s ease;
 
-
+      @screen xs {
+        max-width: 1.125 * $res_width !important;
+      }
 
       .filter {
         @apply inline-block;
@@ -116,7 +118,6 @@ $meta_h: 4rem;
     }
   }
 }
-
 
 .search-filter-scroll-loading {
   width: $load_witdh;
