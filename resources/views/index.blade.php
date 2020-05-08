@@ -26,5 +26,7 @@
     @include('partials.content-list-'.get_post_type())
   @endwhile
 
-  {!! get_the_posts_navigation() !!}
+   {{-- {!! get_the_posts_navigation() !!} --}}
+   <div class="text-center"><a href="{{ App\Tools::poly_get_page_link("search") }}">
+    <input type="button" value="Découvrir tous les contenus" class="btn-home flex-grow m-2 p-6" /></a></div>
 @endsection
