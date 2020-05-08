@@ -10,15 +10,15 @@
 </div>
 
 <div id="menu" class="banner-wrapper">
-  <div class="banner flex">
-    <div>
+  <div class="banner flex content-start items-center flex-wrap md:flex-no-wrap">
+    <div class=" text-center w-full md:w-auto">
       <a class="brand" href="{{ pll_home_url() }}">
         <img class="inline-block h-20"
         src="@asset('images/temp_logo.svg')" />
         {{-- get_bloginfo('name', 'display') --}}
       </a>
     </div>
-    <nav class="nav-primary flex-grow">
+    <nav class="nav-primary flex-grow text-center text-4xl md:text-xl">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif

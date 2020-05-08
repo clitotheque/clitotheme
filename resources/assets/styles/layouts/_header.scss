@@ -1,5 +1,5 @@
 .banner-wrapper {
-  @apply fixed top-0 w-full h-screen z-40;
+  @apply fixed top-0 w-full h-screen z-50;
   @apply bg-book;
   right: 100%;
 
@@ -22,8 +22,7 @@
   .nav {
     @apply list-none p-0 w-full flex flex-wrap;
     @apply font-bigtitle;
-    font-size: 1.5em;
-    font-weight: 500;
+    font-weight: normal;
     text-transform: uppercase;
 
     .menu-item {
