@@ -4,10 +4,6 @@
  bg-white rounded-full opacity-90
 ">
 </div>
-<div class="fixed top-0 right-0 z-50">
-{{-- <img width="30px" class="hidden md:inline-block m-5" src="@asset('images/icons/facebook.svg')" /> --}}
-<img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50" src="@asset('images/icons/menu.svg')" />
-</div>
 
 <div id="menu" class="banner-wrapper">
   <div class="banner flex content-start items-center flex-wrap md:flex-no-wrap">
@@ -24,4 +20,9 @@
       @endif
     </nav>
   </div>
+</div>
+
+<div class="fixed top-0 right-0 z-50">
+{{-- <img width="30px" class="hidden md:inline-block m-5" src="@asset('images/icons/facebook.svg')" /> --}}
+<img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50" src="@asset('images/icons/menu.svg')" />
 </div>
