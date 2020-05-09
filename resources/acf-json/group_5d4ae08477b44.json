@@ -166,7 +166,7 @@
             "key": "field_5d52af1a881a0",
             "label": "Review",
             "name": "review",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "Why do you like this resource ?",
             "required": 0,
             "conditional_logic": 0,
@@ -176,10 +176,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 5,
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5e245aad9afff",
@@ -221,5 +221,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1582566688
+    "modified": 1588953973
 }
