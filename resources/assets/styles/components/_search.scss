@@ -6,6 +6,7 @@ $img_h: 16rem;
 $meta_h: 4rem;
 
 .searchandfilter {
+  @apply flex-grow-0 flex-shrink-0;
   @apply w-full;
   @apply p-6;
   @apply bg-white;
@@ -50,7 +51,7 @@ $meta_h: 4rem;
   }
 
   @screen md {
-    width: 35rem !important;
+    width: 16rem !important;
     max-width: 25%;
   }
 }
