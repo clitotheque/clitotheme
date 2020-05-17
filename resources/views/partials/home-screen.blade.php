@@ -3,8 +3,8 @@
   <div class="absolute full bg-tr"></div>
   <div class="absolute full lg:w-2/3  left-0">
     <div class="absolute full bg-accent opacity-90"></div>
-    <div class="flex flex-col items-center justify-evenly full z-40">
-      <div class="w-full z-40">
+    <div class="flex flex-col items-center justify-center full z-40">
+      <div class="w-full mb-16 z-40">
         <img width="100%" src="@asset('images/temp_logo.svg')" />
       </div>
       <div class="z-40 w-4/5 lg:w-2/3">
@@ -25,4 +25,5 @@
       </div>
   </div>
   </div>
+  <span class="absolute w-full bottom-0 mx-auto text-center text-6xl ">⌵</span>
 </div>
