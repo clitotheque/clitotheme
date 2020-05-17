@@ -25,5 +25,7 @@
       </div>
   </div>
   </div>
-  <span class="absolute w-full bottom-0 mx-auto text-center text-6xl ">⌵</span>
+  <span class="absolute w-full bottom-0 mx-auto text-center text-6xl ">
+    <a href="#menu" class=" hover:text-white">⌵</a>
+  </span>
 </div>

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .full {
   @apply w-full;
   @apply h-full;
