@@ -1,11 +1,15 @@
 @php
 
 $r = new App\Data\Resource(get_post());
+$caption = get_the_post_thumbnail_caption();
 
 @endphp
 <article @php post_class('flex flex-row flex-wrap justify-center bg-white') @endphp>
   <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0 text-center">
-    @include('partials.post-image', ['more' => true])
+    @include('partials.post-image')
+    @if (!($caption == null))
+    <span class="copyright italic text-gray-400">{{ $caption }}</span>
+    @endif
     @if (!empty($r->link))
     <a class="no_link_effect" href="{{ $r->link }}" target="_blank">
     <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
@@ -16,7 +20,7 @@ $r = new App\Data\Resource(get_post());
   </div>
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <div class="entry-content">
-      @include('partials.post-title')
+      @include('partials.post-title', ['more' => true])
       {{ the_content() }}
       <div class="italic mt-4" style="padding-left: 10%;">{!! html_entity_decode($r->review) !!}</div>
       @if (!empty($r->get_yt_id()))

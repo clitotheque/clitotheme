@@ -30,6 +30,7 @@ class Resource extends ACFPost
   public $type_label = 'accent';
   public $link = null;
   public $editor = null;
+  public $pub_date = null;
 
   function __construct($post) {
     parent::__construct($post);

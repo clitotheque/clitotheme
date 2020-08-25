@@ -15,3 +15,10 @@
     filter: saturate(1);
   }
 }
+
+.copyright::before {
+  content: "©";
+  position: relative;
+  top: 1px;
+  margin: 0.5rem;
+}

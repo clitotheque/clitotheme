@@ -15,10 +15,15 @@ if (!isset($more)) $more = false;
         {{ the_title() }}
         @endif
     </h1>
-    <h4 class="leading-none">{!! $r->get_creators_html() !!}
+    <h4 class="leading-none">
+      {!! $r->get_creators_html() !!}
     </h4>
-    @if ((!empty($r->editor)) && $more)
-    <h5>Editeur:&nbsp{{ $r->editor }}</h5>
+    @if ($more && !($r->pub_date == null))
+    <h5>Publié:&nbsp{{ $r->pub_date }}
+    @if (!($r->editor == null))
+      par:&nbsp{{ $r->editor }}
+    @endif
+    </h5>
     @endif
     <h6 class="italic leading-none">
         {!! $r->get_categories_html() !!}
