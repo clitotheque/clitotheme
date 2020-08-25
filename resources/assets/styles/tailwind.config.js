@@ -17,7 +17,7 @@ const globalStyles = ({ addBase, config }) => {
   addBase({
     a: {
       color: config('theme.textColor.primary'),
-      textDecoration: 'underline dotted',
+      textDecoration: 'none',
       borderBottom: '1px solid transparent',
       transition: '0.2s ease',
     },
