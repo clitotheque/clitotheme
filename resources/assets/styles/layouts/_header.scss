@@ -37,6 +37,11 @@
       }
     }
   }
+
+  ul.nav li.lang-item:last-of-type {
+    position: absolute;
+    right: 1rem;
+  }
 }
 
 .banner .nav a {
