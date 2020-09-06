@@ -13,10 +13,6 @@
     <div id="featured_slider">
       @while ($loop->have_posts()) @php $loop->the_post() @endphp
       @include('partials.post-highlighted')
-      @include('partials.post-highlighted')
-      @include('partials.post-highlighted')
-      @include('partials.post-highlighted')
-      @include('partials.post-highlighted')
       @endwhile
     </div>
 </div>
