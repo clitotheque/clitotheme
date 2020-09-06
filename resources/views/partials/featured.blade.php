@@ -12,7 +12,7 @@
     <h1 class="mt-4 mb-6">Les incontournables</h1>
     <div id="featured_slider">
       @while ($loop->have_posts()) @php $loop->the_post() @endphp
-      @include('partials.post-highlighted')
+      <div>@include('partials.post-highlighted')</div>
       @endwhile
     </div>
 </div>
