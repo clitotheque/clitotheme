@@ -3,7 +3,7 @@
 $r = new App\Data\Resource(get_post());
 
 @endphp
-<div class="block featured-box"
+<div class="relative featured-box"
   style="background: url('{!! get_the_post_thumbnail_url(null, 'medium_large') !!}'); background-size: cover;">
   <div class="featured-meta">
     <div class="meta-head">
