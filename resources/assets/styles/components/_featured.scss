@@ -1,5 +1,5 @@
 $height: 18rem;
-$width: 20rem;
+$width: 22rem;
 $meta-height: 6rem;
 
 .featured-box-size {
@@ -8,7 +8,7 @@ $meta-height: 6rem;
 }
 
 .featured-box {
-  @apply box-border;
+  @apply box-border m-auto;
   @apply bg-accent overflow-hidden;
   @apply featured-box-size;
 
@@ -35,6 +35,6 @@ $meta-height: 6rem;
   }
 }
 
-.slick-slide {
+/*.slick-slide {
   @apply p-8;
-}
+}*/
