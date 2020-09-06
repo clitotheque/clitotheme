@@ -22,7 +22,7 @@
     style="background: url(@asset('images/temp/footer.jpg')); background-size:cover; background-position: center">
     </div>
 
-    {{-- Populate auto-complete with categories, tags, etc --}}
+    {{-- Populate auto-complete with categories, tags, etc
     <script type="text/javascript">
       var terms_res_types = [
         @php
@@ -42,7 +42,7 @@
         }
         @endphp
       ];
-    </script>
+    </script>--}}
 
     @php wp_footer() @endphp
   </body>

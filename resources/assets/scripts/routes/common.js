@@ -7,7 +7,7 @@ export default {
     /* Menu button */
     $('#menu-switch').click(() => $('#menu').toggleClass('open'));
 
-    /* Typeahead */
+    /* Typeahead
 
     var substringMatcher = function(strs) {
       return function findMatches(q, cb) {
@@ -43,7 +43,7 @@ export default {
 
     $('.main-search').bind('typeahead:select', function(ev, suggestion) {
       $('#main-search').submit();
-    });
+    });*/
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
