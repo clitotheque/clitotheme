@@ -7,6 +7,13 @@ export default {
     /* Menu button */
     $('#menu-switch').click(() => $('#menu').toggleClass('open'));
 
+    $('.check_age').click((e) => {
+      const message = $(this).context.activeElement.dataset.message;
+      if (!confirm(message.replace(".", ".\r\n"))) {
+        e.preventDefault();
+      }
+    });
+
     /* Typeahead
 
     var substringMatcher = function(strs) {

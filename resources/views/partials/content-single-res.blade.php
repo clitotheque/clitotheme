@@ -11,11 +11,23 @@ $caption = get_the_post_thumbnail_caption();
     <div class="copyright italic text-gray-400">{{ $caption }}</div>
     @endif
     @if (!empty($r->link))
-    <a class="no_link_effect" href="{{ $r->link }}" target="_blank">
-    <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
-      <span>Accéder à la ressource&nbsp;🔗</span>
-    </div>
-    </a>
+      @if($r->mature)
+      <a
+        class="no_link_effect check_age"
+        data-message="Cette resource est réservée à un public majeur. En cliquant sur Ok je confirme être agé de 18 ans ou plus."
+        href="{{ $r->link }}"
+        target="_blank">
+      <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
+        <span>🔞&nbsp;Accéder à la ressource&nbsp;🔗</span>
+      </div>
+      </a>
+      @else
+      <a class="no_link_effect" href="{{ $r->link }}" target="_blank">
+      <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
+        <span>Accéder à la ressource&nbsp;🔗</span>
+      </div>
+      </a>
+      @endif
     @endif
   </div>
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
