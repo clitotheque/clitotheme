@@ -16,12 +16,22 @@ export default {
       slidesToScroll: 1,
       swipeToSlide: true,
       responsive: [{
-        breakpoint: 1100,
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 1050,
         settings: {
           slidesToShow: 2
         }
       }, {
-        breakpoint: 512,
+        breakpoint: 630,
         settings: {
           slidesToShow: 1
         }
