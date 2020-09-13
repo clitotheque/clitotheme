@@ -8,7 +8,7 @@ $caption = get_the_post_thumbnail_caption();
   <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0 text-center">
     @include('partials.post-image')
     @if (!($caption == null))
-    <div class="copyright italic text-gray-400">{{ $caption }}</div>
+    <div class="copyright italic text-gray-600">{{ $caption }}</div>
     @endif
     @if (!empty($r->link))
       @if($r->mature)
