@@ -1,6 +1,6 @@
 $height: 18rem;
 $width: 22rem;
-$meta-height: 6rem;
+$meta-height: 5rem;
 
 .featured-box-size {
   width: $width;
@@ -20,12 +20,17 @@ $meta-height: 6rem;
 }
 
 .featured-meta {
-  @apply absolute bottom-0 w-full bg-transp-white;
+  @apply absolute bottom-0 w-full bg-white;
   @apply text-primary text-center;
 
   .meta-head {
     @apply flex justify-center items-center;
     height: $meta-height;
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
   }
 
   .meta-description {
