@@ -2,6 +2,7 @@
 
 $r = new App\Data\Resource(get_post());
 $caption = get_the_post_thumbnail_caption();
+$related = ($r->related)();
 
 @endphp
 <article @php post_class('flex flex-row flex-wrap justify-center bg-white') @endphp>
@@ -42,10 +43,20 @@ $caption = get_the_post_thumbnail_caption();
   src="https://www.youtube.com/embed/{{ $r->get_yt_id() }}?autoplay=0&modestbranding=1&rel=0&showinfo=0&origin={{ home_url() }}"
   frameborder="0"></iframe>
       </div>
-      </div>
       @endif
+      </div>
     </div>
   </div>
+  @if (count($related) > 0)
+  <div class="black-section p-10">
+      <h1 class="mt-4 mb-6">Contenus reliés</h1>
+      <div id="featured_slider">
+        @foreach ($related as $related_post)
+            <div>@include('partials.post-highlighted', ['res' => $related_post])</div>
+        @endforeach
+      </div>
+  </div>
+  @endif
   {{--
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
