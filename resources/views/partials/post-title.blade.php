@@ -3,7 +3,7 @@ if (!isset($post_link)) $post_link = false;
 if (!isset($more)) $more = false;
 //var_dump($r);
 @endphp
-<header class="post-title mb-10">
+<header class="post-title @if (!$more) mb-10 @endif">
     <h1 class="entry-title title-{{ $r->type_label }} leading-none">
         @if ($post_link)
         <a
