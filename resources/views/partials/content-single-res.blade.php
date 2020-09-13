@@ -13,7 +13,7 @@ $caption = get_the_post_thumbnail_caption();
     @if (!empty($r->link))
       @if($r->mature)
       <a
-        class="no_link_effect check_age"
+        class="no_link_effect"
         data-message="Cette resource est réservée à un public majeur. En cliquant sur Ok je confirme être agé de 18 ans ou plus."
         href="{{ $r->link }}"
         target="_blank">
