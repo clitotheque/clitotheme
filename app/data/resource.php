@@ -86,12 +86,16 @@ class Resource extends ACFPost
 
     $this->types = wp_get_post_terms($pid, 'res_types');
 
+
     $this->related = function () {
+      $rel_contents = (array) get_field('related_content', $this->p->ID);
+
       return array_map(
         function ($r) {
           return new Resource($r);
         },
-      (array) get_field('related_content', $this->p->ID));
+        array_filter($rel_contents)
+      );
     };
 
     $this->type_label = $this->get_type_label();
