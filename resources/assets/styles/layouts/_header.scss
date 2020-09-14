@@ -38,9 +38,11 @@
     }
   }
 
-  ul.nav li.lang-item:last-of-type {
-    position: absolute;
-    right: 1rem;
+  @screen md {
+    ul.nav li.lang-item:last-of-type {
+      position: absolute;
+      right: 1rem;
+    }
   }
 }
 
