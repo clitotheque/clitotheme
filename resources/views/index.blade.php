@@ -9,7 +9,12 @@
 @endsection
 
 @section('content')
-  @include('partials.page-header')
+  {{-- @include('partials.page-header') --}}
+  <div class="page-header">
+    <h1 class="text-center uppercase mt-10">
+      {{ pll__( 'Derniers ajouts' ) }}
+    </h1>
+  </div>
 
   @if (!have_posts())
     <div class="alert alert-warning">
