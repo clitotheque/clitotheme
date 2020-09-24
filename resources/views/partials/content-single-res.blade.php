@@ -15,17 +15,17 @@ $related = ($r->related)();
       @if($r->mature)
       <a
         class="no_link_effect"
-        data-message="Cette resource est réservée à un public majeur. En cliquant sur Ok je confirme être agé de 18 ans ou plus."
+        data-message="{{ pll__( 'Cette resource est réservée à un public majeur. En cliquant sur Ok je confirme être agé de 18 ans ou plus.' ) }}'"
         href="{{ $r->link }}"
         target="_blank">
       <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
-        <span>🔞&nbsp;Accéder à la ressource&nbsp;🔗</span>
+        <span>🔞&nbsp;{{ pll__( 'Accéder à la ressource' ) }}&nbsp;🔗</span>
       </div>
       </a>
       @else
       <a class="no_link_effect" href="{{ $r->link }}" target="_blank">
       <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
-        <span>Accéder à la ressource&nbsp;🔗</span>
+        <span>{{ pll__( 'Accéder à la ressource' ) }}&nbsp;🔗</span>
       </div>
       </a>
       @endif
@@ -49,7 +49,7 @@ $related = ($r->related)();
   </div>
   @if (count($related) > 0)
   <div class="black-section p-10">
-      <h1 class="mt-4 mb-6">Contenus reliés</h1>
+      <h1 class="mt-4 mb-6">{{ pll__( 'Contenus reliés' ) }}</h1>
       <div id="featured_slider">
         @foreach ($related as $related_post)
             <div>@include('partials.post-highlighted', ['res' => $related_post])</div>
