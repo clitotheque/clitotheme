@@ -21,7 +21,7 @@ if (!isset($more)) $more = false;
     @if ($more && !($r->pub_date == null))
     <h5>{{ pll__( 'Publié' ) }}:&nbsp{{ $r->pub_date }}
     @if (!($r->editor == null))
-      {{ pll__( 'par' }}:&nbsp{{ $r->editor }}
+      {{ pll__( 'par' ) }}:&nbsp{{ $r->editor }}
     @endif
     </h5>
     @endif
