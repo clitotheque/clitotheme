@@ -19,9 +19,9 @@ if (!isset($more)) $more = false;
       {!! $r->get_creators_html() !!}
     </h4>
     @if ($more && !($r->pub_date == null))
-    <h5>Publié:&nbsp{{ $r->pub_date }}
+    <h5>{{ pll_( 'Publié' ) }}:&nbsp{{ $r->pub_date }}
     @if (!($r->editor == null))
-      par:&nbsp{{ $r->editor }}
+      {{ pll_( 'par' }}:&nbsp{{ $r->editor }}
     @endif
     </h5>
     @endif

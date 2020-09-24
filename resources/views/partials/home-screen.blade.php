@@ -18,9 +18,9 @@
         </div> --}}
         <div class="flex flex-row flex-wrap justify-around z-40">
           <a href="{{ App\Tools::poly_get_page_link("search") }}">
-            <input type="button" value="Découvrir les contenus" class="btn-home flex-grow m-2 p-6" /></a>
+            <input type="button" value="{{ pll_( 'Découvrir les contenus' ) }}" class="btn-home flex-grow m-2 p-6" /></a>
             {{--  {{ App\Tools::poly_get_page_link("proposer-une-ressource") }} --}}
-          <a href="https://framaforms.org/clitotheque-proposer-une-ressource-1588954160" target="_blank"><input type="button" value="Proposer une ressource" class="btn-home flex-grow m-2 p-6" /></a>
+          <a href="{!! pll_( 'Lien vers formulaire' ) !!}" target="_blank"><input type="button" value="{{ pll__( 'Proposer une ressource' ) }}" class="btn-home flex-grow m-2 p-6" /></a>
         </div>
       </div>
   </div>
