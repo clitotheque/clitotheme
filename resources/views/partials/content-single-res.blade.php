@@ -34,6 +34,7 @@ $related = ($r->related)();
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <div class="entry-content">
       @include('partials.post-title', ['more' => true])
+      {!! do_shortcode('[wp_ulike]') !!}
       <div class="with-dotted-links">
       {{ the_content() }}
       <div class="italic mt-4" style="padding-left: 10%;">
