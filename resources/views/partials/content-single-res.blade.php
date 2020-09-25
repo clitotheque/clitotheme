@@ -36,7 +36,8 @@ $related = ($r->related)();
       @include('partials.post-title', ['more' => true])
       <div class="with-dotted-links">
       {{ the_content() }}
-      <div class="italic mt-4" style="padding-left: 10%;">{!! html_entity_decode($r->review) !!}</div>
+      <div class="italic mt-4" style="padding-left: 10%;">
+        <span class="absolute guillemet">&nbsp;</span>{!! html_entity_decode($r->review) !!}</div>
       @if (!empty($r->get_yt_id()))
       <div class="relative overflow-hidden h-0 my-4" style="padding-bottom:56.25%">
       <iframe class="w-full h-full absolute left-0 top-0" id="ytplayer" type="text/html" width="640" height="360"

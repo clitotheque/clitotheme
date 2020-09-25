@@ -26,3 +26,13 @@
 .with-dotted-links a {
   text-decoration: underline dotted !important;
 }
+
+.guillemet::before {
+  content: "‟";
+  margin-right: 1rem;
+  left: -3rem;
+  position: relative;
+  font-size: 7rem;
+  line-height: 5rem;
+  color: lightgray;
+}
