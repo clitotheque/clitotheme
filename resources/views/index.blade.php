@@ -10,8 +10,8 @@
 
 @section('content')
   {{-- @include('partials.page-header') --}}
-  <div class="page-header">
-    <h1 class="text-center uppercase mt-10">
+  <div class="page-header text-center">
+    <h1 class="inline-block uppercase mt-10 pt-3 px-4 bg-white">
       {{ pll__( 'Derniers ajouts' ) }}
     </h1>
   </div>
