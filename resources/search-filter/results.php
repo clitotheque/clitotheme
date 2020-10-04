@@ -36,7 +36,7 @@ if ( $query->have_posts() )
 			$query->the_post();
 			$r = new App\Data\Resource(get_post());
 			$categories = $r->get_categories_html(true, 35, '...', true);
-			$title = App\Tools::clean_cut (get_the_title(), 20);
+			$title = App\Tools::clean_cut (get_the_title(), 18);
 			$color = $r->type_label;
 			$bg = " bg-".$color;
 
