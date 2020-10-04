@@ -79,7 +79,7 @@ if ( $query->have_posts() )
 					<span class="filter w-full bg-<?= $color; ?>">
 					<img
 					class="w-24 m-auto"
-					src="<?= asset_path('images/icons/eye.svg') ?>"
+					src="<?= asset_path('images/clitonly.png') ?>"
 					alt="Open content"  />
 					</span>
 				</a>

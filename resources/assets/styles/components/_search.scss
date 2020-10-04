@@ -81,7 +81,7 @@ $meta_h: 4rem;
         height: $img_h;
 
         img {
-          padding-top: ($img_h / 2) - ($load_witdh / 2);
+          padding-top: 2.5rem; //($img_h / 2) - ($load_witdh / 2);
         }
       }
 
