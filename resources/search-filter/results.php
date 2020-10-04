@@ -61,7 +61,7 @@ if ( $query->have_posts() )
 							?> <div class="result-image"></div> <?php
 						}
 						?>
-					<div class="result-meta<?= $bg; ?> italic">
+					<div class="result-meta<?= $bg; ?> italic pt-1">
 						<h4 class="mb-0"><?= $title ?></h4>
 						<h6><?= $categories; ?></h6>
 					</div>
