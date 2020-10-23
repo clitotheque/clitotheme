@@ -7,7 +7,7 @@ $related = ($r->related)();
 @endphp
 <article @php post_class('flex flex-row flex-wrap justify-center bg-white') @endphp>
   <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0 text-center">
-    @include('partials.post-image')
+    @include('partials.post-image', [ 'yellow' => true ])
     @if (!($caption == null))
     <div class="copyright italic text-gray-600">{{ $caption }}</div>
     @endif
@@ -18,13 +18,13 @@ $related = ($r->related)();
         data-message="{{ pll__( 'Cette resource est réservée à un public majeur. En cliquant sur Ok je confirme être agé de 18 ans ou plus.' ) }}'"
         href="{{ $r->link }}"
         target="_blank">
-      <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
+      <div class="inline-block mt-4 p-4 mx-auto hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
         <span>🔞&nbsp;{{ pll__( 'Accéder à la ressource' ) }}&nbsp;🔗</span>
       </div>
       </a>
       @else
       <a class="no_link_effect" href="{{ $r->link }}" target="_blank">
-      <div class="inline-block mt-4 p-4 mx-auto rounded-lg border-{{ $r->type_label }} border-4 hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
+      <div class="inline-block mt-4 p-4 mx-auto rounded-lg hover:bg-{{ $r->type_label }} text-center uppercase font-bold text-lg transition-colors duration-150">
         <span>{{ pll__( 'Accéder à la ressource' ) }}&nbsp;🔗</span>
       </div>
       </a>
