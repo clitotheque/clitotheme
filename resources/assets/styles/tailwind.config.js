@@ -29,13 +29,16 @@ const globalStyles = ({ addBase, config }) => {
       lineHeight: config('theme.lineHeight.normal'),
       textAlign: 'justify',
     },
-    'h1, h2, h3, h4, h5': {
-      fontFamily: config('theme.fontFamily.title'),
+    'h2, h3, h4, h5': {
       marginBottom: config('theme.margin.2'),
       lineHeight: config('theme.lineHeight.tight'),
     },
     h1: {
-      fontSize: config('theme.fontSize.5xl')
+      fontFamily: '"Dosis", "Open sans", "sans-serif"',
+      fontWeight: 500,
+      fontSize: config('theme.fontSize.5xl'),
+      marginBottom: config('theme.margin.2'),
+      lineHeight: config('theme.lineHeight.tight'),
     },
     h2: {
       fontSize: config('theme.fontSize.4xl')
@@ -94,10 +97,10 @@ module.exports = {
       },
       fontFamily: {
         'bigtitle': ['Dosis', 'sans-serif'],
-        'title': ['Open Sans', 'sans-serif'],
-        'sans': ['Open Sans', 'sans-serif'],
-        'display': ['Open Sans', 'sans-serif'],
-        'body': ['Open Sans', 'sans-serif'],
+        'title': ['Open sans', 'sans-serif'],
+        'sans': ['Open sans', 'sans-serif'],
+        'display': ['Open sans', 'sans-serif'],
+        'body': ['Open sans', 'sans-serif'],
       },
       inset: {
         '2/3': '66%',
