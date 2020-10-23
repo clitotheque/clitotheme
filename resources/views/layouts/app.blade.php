@@ -20,6 +20,7 @@
 
     <div class="h-40 w-full overflow-hidden bg-accent"
     style="background: url(@asset('images/temp/footer.jpg')); background-size:cover; background-position: center">
+    <a href="{{ get_home_url() }}" class="h-full w-full block">&nbsp;</a>
     </div>
 
     {{-- Populate auto-complete with categories, tags, etc
