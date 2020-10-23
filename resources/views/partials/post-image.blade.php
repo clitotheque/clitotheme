@@ -2,14 +2,17 @@
  //TODO Clean
 
  if(!isset($cover)) $cover = false;
+ if(!isset($yellow)) $yellow = false;
 
  $landscape = false;//$r->img_is_landscape();
 
  $zoom = "cover";
- if ($landscape) $zoom = "130%" //"contain"
+ if ($landscape) $zoom = "130%"; //"contain"
+
+ if ($yellow) { $bgcol = "accent"; } else { $bgcol = $r->type_label; }
 @endphp
 
-<div class="overflow-hidden p-3 w-full bg-{{ $r->type_label }}
+<div class="overflow-hidden p-3 w-full bg-{{ $bgcol }}
     @if ($cover)
         h-full
     @endif">
