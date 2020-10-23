@@ -13,6 +13,16 @@
 
   @screen md {
     @apply sticky h-20;
+
+    .nav-primary {
+      @apply text-vw;
+    }
+  }
+
+  @screen xl {
+    .nav-primary {
+      @apply text-3xl;
+    }
   }
 }
 
