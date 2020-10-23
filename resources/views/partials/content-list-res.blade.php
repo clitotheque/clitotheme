@@ -17,7 +17,7 @@ $landscape = $r->img_is_landscape();
     my-16
     p-0
     bg-white">
-  <div class="flex-shrink-0 flex-grow h-96 overflow-hidden
+  <div class="flex-shrink-0 flex-grow h-84 overflow-hidden
     @if ($landscape)
       landscape
     @else

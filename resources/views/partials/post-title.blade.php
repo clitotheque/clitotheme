@@ -4,7 +4,7 @@ if (!isset($more)) $more = false;
 //var_dump($r);
 @endphp
 <header class="post-title @if (!$more) mb-10 @endif">
-    <h1 class="entry-title title-{{ $r->type_label }} leading-none">
+    <h1 class="entry-title title-{{ $r->type_label }} leading-none text-45xl uppercase">
         @if ($post_link)
         <a
             href="{{ the_permalink() }}"
@@ -19,9 +19,9 @@ if (!isset($more)) $more = false;
       {!! $r->get_creators_html() !!}
     </h4>
     @if ($more && !($r->pub_date == null))
-    <h5>{{ pll__( 'Publié' ) }}:&nbsp{{ $r->pub_date }}
+    <h5>{{ $r->pub_date }}
     @if (!($r->editor == null))
-      {{ pll__( 'par' ) }}:&nbsp{{ $r->editor }}
+      &nbsp;-&nbsp{{ $r->editor }}
     @endif
     </h5>
     @endif

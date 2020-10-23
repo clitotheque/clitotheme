@@ -9,17 +9,11 @@ else $r = $res;
   <div class="featured-meta">
     <div class="meta-head">
       <div class="m-auto">
-        <h3 class="leading-none">
+        <h3 class="leading-none uppercase font-weight-5">
             {!! \App\Tools::clean_cut(get_the_title($r->p), 50) !!}
         </h3>
-        {{-- <h6 class="italic leading-none">{!! $r->get_categories_html(true) !!}</h6> --}}
       </div>
     </div>
-    {{--
-      <div class="meta-description">
-        <p>{{ the_excerpt() }}</p>
-      </div>
-    --}}
   </div>
   <a
   href="{!! the_permalink($r->p) !!}"
