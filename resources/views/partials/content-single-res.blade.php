@@ -5,7 +5,7 @@ $caption = get_the_post_thumbnail_caption();
 $related = ($r->related)();
 
 @endphp
-<article @php post_class('flex flex-row flex-wrap justify-center bg-white') @endphp>
+<article @php post_class('flex flex-row flex-wrap justify-center bg-white pt-4') @endphp>
   <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0 text-center">
     @include('partials.post-image', [ 'yellow' => true ])
     @if (!($caption == null))
@@ -35,12 +35,14 @@ $related = ($r->related)();
     <div class="entry-content relative">
       @include('partials.post-title', ['more' => true])
       {!! do_shortcode('[wp_ulike]') !!}
-      <div class="with-dotted-links">
+      <section class="with-dotted-links">
       {{ the_content() }}
-      <div class="italic mt-4" style="padding-left: 10%;">
-        <span class="absolute guillemet">&nbsp;</span>{!! html_entity_decode($r->review) !!}</div>
+      </section>
+      <section class="with-dotted-links italic mt-10" style="padding-left: 10%;">
+        <span class="absolute guillemet">&nbsp;</span>{!! html_entity_decode($r->review) !!}
+      </section>
       @if (!empty($r->get_yt_id()))
-      <div class="relative overflow-hidden h-0 my-4" style="padding-bottom:56.25%">
+      <div class="relative overflow-hidden h-0 my-6" style="padding-bottom:56.25%">
       <iframe class="w-full h-full absolute left-0 top-0" id="ytplayer" type="text/html" width="640" height="360"
   src="https://www.youtube.com/embed/{{ $r->get_yt_id() }}?autoplay=0&modestbranding=1&rel=0&showinfo=0&origin={{ home_url() }}"
   frameborder="0"></iframe>
