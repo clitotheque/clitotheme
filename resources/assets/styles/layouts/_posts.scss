@@ -36,3 +36,11 @@
   line-height: 5rem;
   color: lightgray;
 }
+
+.right-column .wpulike {
+  @apply absolute top-0 right-0;
+}
+
+.right-column .post-title h1 {
+  padding-right: 100px;
+}

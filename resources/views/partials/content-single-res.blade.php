@@ -32,7 +32,7 @@ $related = ($r->related)();
     @endif
   </div>
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
-    <div class="entry-content">
+    <div class="entry-content relative">
       @include('partials.post-title', ['more' => true])
       {!! do_shortcode('[wp_ulike]') !!}
       <div class="with-dotted-links">
