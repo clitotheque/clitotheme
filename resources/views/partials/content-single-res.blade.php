@@ -4,6 +4,9 @@ $r = new App\Data\Resource(get_post());
 $caption = get_the_post_thumbnail_caption();
 $related = ($r->related)();
 
+/* WP ULIKE treat translations as different posts.
+    But we want the same vote count for post and it's translation so
+    we always give WP ULIKE the id of the default language post. */
 $default_lang = pll_default_language();
 $default_post = pll_get_post($r->p->ID, $default_lang);
 if ($default_post == null || $default_post == false)
