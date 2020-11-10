@@ -4,6 +4,12 @@ $r = new App\Data\Resource(get_post());
 $caption = get_the_post_thumbnail_caption();
 $related = ($r->related)();
 
+$default_lang = pll_default_language();
+$default_post = pll_get_post($r->p->ID, $default_lang);
+if ($default_post == null || $default_post == false)
+  $like_id = $r->p->ID;
+else $like_id = $default_post;
+
 @endphp
 <article @php post_class('flex flex-row flex-wrap justify-center bg-white pt-4') @endphp>
   <div class="left-column w-1/4 min p-5 flex-grow sm:flex-grow-0 text-center">
@@ -34,7 +40,7 @@ $related = ($r->related)();
   <div class="right-column w-2/4 p-5 flex-grow sm:flex-grow-0">
     <div class="entry-content relative">
       @include('partials.post-title', ['more' => true])
-      {!! do_shortcode('[wp_ulike]') !!}
+      {!! do_shortcode("[wp_ulike id='$like_id']") !!}
       <section class="with-dotted-links">
       {{ the_content() }}
       </section>
