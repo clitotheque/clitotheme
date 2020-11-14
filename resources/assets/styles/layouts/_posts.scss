@@ -28,9 +28,9 @@
 }
 
 .guillemet::before {
-  content: "‟";
+  content: "\201F";
   margin-right: 1rem;
-  left: -3rem;
+  left: -4rem;
   position: relative;
   font-size: 7rem;
   line-height: 5rem;
