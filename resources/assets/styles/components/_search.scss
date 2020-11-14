@@ -11,6 +11,10 @@ $meta_h: 4rem;
   @apply p-6;
   @apply bg-white;
 
+  h4 {
+    font-weight: 600;
+  }
+
   ul {
     @apply w-full;
     padding: 0;
