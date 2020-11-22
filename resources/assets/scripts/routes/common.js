@@ -56,7 +56,7 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
     $("#featured_slider").slick({
       infinite: true,
-      arrows: false,
+      arrows: true,
       autoplay: true,
       mobileFirst: true,
       autoplaySpeed: 3000,
