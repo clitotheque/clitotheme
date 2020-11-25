@@ -39,8 +39,8 @@
     "soberwp/controller": "~2.1.0"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^2.8.0",
-    "roots/sage-installer": "~1.6.3"
+    "squizlabs/php_codesniffer": "3.5.*",
+    "roots/sage-installer": "1.6.*"
   },
   "scripts": {
     "test": ["phpcs"],
