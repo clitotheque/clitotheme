@@ -14,3 +14,18 @@ function index_query( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'index_query' );
+
+
+/* Disable single and archive pages for custom posts */
+add_action( 'template_redirect', 'redirect_post' );
+
+function redirect_post() {
+  if ( is_singular( 'creator' ) ) {
+    $link = \App\Tools::poly_get_page_link(4);
+    $id = urlencode(get_the_title());
+    $search_param = "_sf_s=$id";
+    $url = "$link?$search_param";
+    wp_redirect( $url, 301 );
+    exit;
+  }
+}
