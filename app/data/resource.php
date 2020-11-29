@@ -52,9 +52,9 @@ class Resource extends ACFPost
       'ignoreday') == 0;
 
     $igm = get_field('ignore_month', $pid);
-    $this->ignore_month = $this->ignore_day && strcmp(
-      ($igm > 0) ? $igm[0] : '',
-      'ignoremonth') == 0;
+    $this->ignore_month =
+      $this->ignore_day
+      && strcmp((count($igm) > 0) ? $igm[0] : '', 'ignoremonth') == 0;
 
     $pdate = strtotime(get_field('publication_date', $pid, false));
 
