@@ -155,8 +155,8 @@ class Resource extends ACFPost
           return "<span>$name</span>";
 
         $link = \App\Tools::poly_get_page_link(4);
-        $id = $c->p->ID;
-        $search_param = "_sfm_creator=$id";
+        $id = urlencode($c->name);
+        $search_param = "_sf_s=$id";
         return "<span><a href=\"$link?$search_param\">$name</a></span>";
       },
       $this->creators
