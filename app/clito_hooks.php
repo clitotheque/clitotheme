@@ -33,6 +33,21 @@ function clito_redirect_post() {
     $search_param = "_sft_category=$id";
     $redirect = true;
   }
+  elseif (is_tag()) {
+    $id = urlencode(get_queried_object()->name);
+    $search_param = "_sf_s=$id";
+    $redirect = true;
+  }
+  elseif (is_tax('res_lang')) {
+    $id = get_queried_object()->term_id;
+    $search_param = "_sfm_language=$id";
+    $redirect = true;
+  }
+  elseif (is_tax('res_types')) {
+    $id = urlencode(get_queried_object()->slug);
+    $search_param = "_sft_res_types=$id";
+    $redirect = true;
+  }
 
   if($redirect) {
     $link = \App\Tools::poly_get_page_link(4);
