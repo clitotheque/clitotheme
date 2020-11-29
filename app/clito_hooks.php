@@ -20,10 +20,22 @@ add_action( 'pre_get_posts', 'index_query' );
 add_action( 'template_redirect', 'clito_redirect_post' );
 
 function clito_redirect_post() {
+  $search_param = "";
+  $redirect = false;
+
   if ( is_singular( 'creator' ) ) {
-    $link = \App\Tools::poly_get_page_link(4);
     $id = urlencode(get_the_title());
     $search_param = "_sf_s=$id";
+    $redirect = true;
+  }
+  elseif (is_category()) {
+    $id = urlencode(get_queried_object()->slug);
+    $search_param = "_sft_category=$id";
+    $redirect = true;
+  }
+
+  if($redirect) {
+    $link = \App\Tools::poly_get_page_link(4);
     $url = "$link?$search_param";
     wp_redirect( $url, 301 );
     exit;
