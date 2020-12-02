@@ -4,8 +4,11 @@
   <div class="absolute full lg:w-2/3  left-0">
     <div class="absolute full bg-accent opacity-90"></div>
     <div class="flex flex-col items-center justify-center full z-40">
-      <div class="w-full mb-16 z-40">
+      <div class="w-full z-40 mb-16 relative">
         <img width="100%" src="@asset('images/temp_logo.svg')" />
+        <div class="absolute w-3/4 z-40 text-right subtitle">
+          <h3 class="italic">{{ pll__( 'Base collaborative de ressources sur le plaisir féminin' ) }}</h3>
+        </div>
       </div>
       <div class="z-40 w-4/5 lg:w-2/3">
         {{-- <div>
