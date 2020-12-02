@@ -64,7 +64,18 @@ module.exports = {
     content: [
       './resources/**/*.php',
       './resources/**/*.js',
-    ]},
+    ],
+    options: {
+      safelist: [
+        'bg-accent',
+        'bg-primary',
+        'bg-white',
+        'bg-video',
+        'bg-book',
+        'bg-link',
+        'bg-film',
+        'bg-site'],
+    }},
   theme: {
     colors: {
       accent: '#E2A50D',
