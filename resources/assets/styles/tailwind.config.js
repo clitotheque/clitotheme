@@ -58,6 +58,13 @@ const globalStyles = ({ addBase, config }) => {
  * Configuration
  */
 module.exports = {
+  purge: {
+//    mode: 'all',
+    preserveHtmlElements: false,
+    content: [
+      './resources/**/*.php',
+      './resources/**/*.js',
+    ]},
   theme: {
     colors: {
       accent: '#E2A50D',
