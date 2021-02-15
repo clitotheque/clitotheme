@@ -6,7 +6,8 @@
   <body @php body_class([
     'bg-dotted',
     'bg-fixed',
-    'w-full']) @endphp>
+    'w-full',
+    'h-full']) @endphp>
 
     @yield('before')
 
