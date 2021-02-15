@@ -13,6 +13,7 @@
 
   @screen md {
     @apply sticky h-20;
+    @apply w-auto;
 
     .nav-primary {
       @apply text-vw;

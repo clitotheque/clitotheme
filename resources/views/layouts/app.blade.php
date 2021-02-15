@@ -7,6 +7,7 @@
     'bg-dotted',
     'bg-fixed',
     'relative',
+    'overflow-x-hidden',
     'w-full',
     'h-full']) @endphp>
 
