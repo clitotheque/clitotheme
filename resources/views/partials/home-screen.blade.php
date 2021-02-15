@@ -29,6 +29,6 @@
   </div>
   </div>
   <span class="absolute w-full bottom-0 mx-auto text-center arrow-down leading-none transform scale-x-150">
-    <a href="#menu" class="blink">⌵</a>
+    <a href="#c-menu" class="blink">⌵</a>
   </span>
 </div>

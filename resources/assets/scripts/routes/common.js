@@ -5,7 +5,7 @@ export default {
     // JavaScript to be fired on all pages
 
     /* Menu button */
-    $('#menu-switch').click(() => $('#menu').toggleClass('open'));
+    $('#menu-switch').click(() => $('#c-menu').toggleClass('open'));
 
     $('.check_age').click((e) => {
       const message = $(this).context.activeElement.dataset.message;

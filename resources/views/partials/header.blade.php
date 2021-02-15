@@ -5,7 +5,7 @@
 ">
 </div>
 
-<div id="menu" class="banner-wrapper">
+<div id="c-menu" class="banner-wrapper">
   <div class="banner flex content-start items-center flex-wrap md:flex-no-wrap">
     <div class=" text-center w-full md:w-auto">
       <a class="brand" href="{{ pll_home_url() }}">
