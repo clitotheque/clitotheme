@@ -20,7 +20,8 @@
         </form>
         </div> --}}
         <div class="flex flex-row flex-wrap justify-around z-40">
-          <a href="{{ App\Tools::poly_get_page_link("search") }}">
+          <a href="#c-scroll"
+          {{-- href="{{ App\Tools::poly_get_page_link("search") }}" --}}>
             <input type="button" value="{{ pll__( 'Découvrir les contenus' ) }}" class="btn-home flex-grow m-2 p-6" /></a>
             {{--  {{ App\Tools::poly_get_page_link("proposer-une-ressource") }} --}}
           <a href="{!! pll__( 'Lien vers formulaire' ) !!}" target="_blank"><input type="button" value="{{ pll__( 'Proposer une ressource' ) }}" class="btn-home flex-grow m-2 p-6" /></a>
