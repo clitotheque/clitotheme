@@ -28,7 +28,7 @@
       </div>
   </div>
   </div>
-  <span class="absolute w-full bottom-0 mx-auto text-center text-6xl ">
-    <a href="#menu" class=" hover:text-white">⌵</a>
+  <span class="absolute w-full bottom-0 mx-auto text-center arrow-down leading-none transform scale-x-150">
+    <a href="#menu" class="blink">⌵</a>
   </span>
 </div>
