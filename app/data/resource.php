@@ -74,7 +74,7 @@ class Resource extends ACFPost
 
     $this->editor = get_field('editor', $pid);
 
-    $this->review = nl2br(htmlspecialchars(get_field('review', $pid)));
+    $this->review = get_field('review', $pid);
 
     $categories = array_map(
       function($cid) {

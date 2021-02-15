@@ -48,7 +48,7 @@ else $like_id = $default_post;
       {{ the_content() }}
       </section>
       <section class="with-dotted-links italic mt-10" style="padding-left: 10%;">
-        <span class="absolute guillemet">&nbsp;</span>{!! html_entity_decode($r->review) !!}
+        <span class="absolute guillemet">&nbsp;</span>{!! $r->review !!}
       </section>
       @if (!empty($r->get_yt_id()))
       <div class="relative overflow-hidden h-0 my-6" style="padding-bottom:56.25%">
