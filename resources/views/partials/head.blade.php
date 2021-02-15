@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#ffffff">
 
   @if (is_front_page())
-  <meta property="og:image" name="og:image" content="https://clitotheque.org/app/uploads/2021/02/clitohead.png">
+  <meta property="og:image" name="og:image" content="https://clitotheque.org/app/uploads/2021/02/clitohead_fb.png">
   @endif
 
 </head>
