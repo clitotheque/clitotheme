@@ -8,7 +8,7 @@
     ));
 @endphp
 
-<div class="black-section p-10">
+<div class="black-section pb-10 pl-10 pr-10">
     <h1 class="mt-4 mb-6">{{ pll__( 'Les incontournables' ) }}</h1>
     <div id="featured_slider">
       @while ($loop->have_posts()) @php $loop->the_post() @endphp
