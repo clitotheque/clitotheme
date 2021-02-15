@@ -10,7 +10,7 @@ else $r = $res;
     <div class="meta-head">
       <div class="m-auto">
         <h3 class="leading-none uppercase font-weight-5">
-            {!! \App\Tools::clean_cut(get_the_title($r->p), 50) !!}
+            {!! \App\Tools::clean_cut(get_the_title($r->p), 40) !!}
         </h3>
       </div>
     </div>
