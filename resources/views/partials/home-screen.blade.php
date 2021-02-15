@@ -28,7 +28,7 @@
       </div>
   </div>
   </div>
-  <span class="absolute w-full bottom-0 mx-auto text-center arrow-down leading-normal transform scale-x-150">
+  <span class="absolute w-full bottom-0 mx-auto text-center arrow-down leading-normal pb-4" >
     <a href="#c-scroll" class="blink">⌵</a>
   </span>
 </div>

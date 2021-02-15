@@ -6,6 +6,7 @@
   <body @php body_class([
     'bg-dotted',
     'bg-fixed',
+    'relative',
     'w-full',
     'h-full']) @endphp>
 
