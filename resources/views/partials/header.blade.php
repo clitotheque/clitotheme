@@ -19,10 +19,25 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
+    <div class="w-full block text-center md:hidden">
+    <div class="inline-block mx-auto  ">
+      <a href="https://www.facebook.com/Clitoth%C3%A8que-104473844947529" target="_blank">
+      <img width="25px" class="inline-block top-right-icon" src="@asset('images/icons/facebook.svg')" /></a>
+      <a href="https://www.instagram.com/clitotheque" target="_blank">
+      <img width="25px" class="inline-block top-right-icon" src="@asset('images/icons/insta.svg')" /></a>
+      <a href="mailto:contact@clitotheque.org" target="_blank">
+      <img width="25px" class="inline-block top-right-icon" src="@asset('images/icons/emailr.svg')" /></a>
+    </div>
+    </div>
   </div>
 </div>
 
 <div class="fixed top-0 right-0 z-50">
-{{-- <img width="30px" class="hidden md:inline-block m-5" src="@asset('images/icons/facebook.svg')" /> --}}
 <img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50" src="@asset('images/icons/menu.svg')" />
+<a href="https://www.facebook.com/Clitoth%C3%A8que-104473844947529" target="_blank">
+<img  class="hidden w-5 lg:w-6 md:inline-block top-right-icon" src="@asset('images/icons/facebook.svg')" /></a>
+<a href="https://www.instagram.com/clitotheque" target="_blank">
+<img class="hidden w-5 lg:w-6 md:inline-block top-right-icon" src="@asset('images/icons/insta.svg')" /></a>
+<a href="mailto:contact@clitotheque.org" target="_blank">
+<img class="hidden w-5 lg:w-6 md:inline-block top-right-icon-mail mr-1" src="@asset('images/icons/emailr.svg')" /></a>
 </div>

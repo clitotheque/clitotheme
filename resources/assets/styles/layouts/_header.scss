@@ -52,7 +52,7 @@
   @screen md {
     ul.nav li.lang-item:last-of-type {
       position: absolute;
-      right: 1rem;
+      right: 7rem;
     }
   }
 }
@@ -67,4 +67,14 @@
   &:hover {
     color: theme('colors.accent');
   }
+}
+
+.top-right-icon {
+  margin-top: 1.75rem !important;
+  margin-right: 0.25rem !important;
+}
+
+.top-right-icon-mail {
+  margin-top: 1.75rem !important;
+  margin-right: 1rem !important;
 }
