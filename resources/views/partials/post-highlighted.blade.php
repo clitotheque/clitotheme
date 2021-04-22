@@ -17,6 +17,6 @@ else $r = $res;
   </div>
   <a
   href="{!! the_permalink($r->p) !!}"
-  title="{{ the_title_attribute($r->p) }}"
+  title="{{ get_the_title($r->p) }}"
   class="absolute top-0 left-0 h-full w-full no_link_effect">&nbsp;</a>
 </div>
