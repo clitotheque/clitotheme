@@ -16,7 +16,7 @@ if (!isset($more)) $more = false;
         @endif
     </h1>
     <h4 class="leading-none">
-      {!! $r->get_creators_html() !!}
+      {!! $r->get_creators_html($no_link = true) !!}
     </h4>
     @if ($more && !($r->pub_date == null))
     <h5>{{ $r->pub_date }}
