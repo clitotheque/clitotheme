@@ -21,11 +21,11 @@
     </nav>
     <div class="w-full block text-center md:hidden">
     <div class="inline-block mx-auto  ">
-      <a href="https://www.facebook.com/Clitoth%C3%A8que-104473844947529" target="_blank">
+      <a href="https://www.facebook.com/Clitoth%C3%A8que-104473844947529" target="_blank" alt="Facebook">
       <img width="25px" class="inline-block top-right-icon" src="@asset('images/icons/facebook.svg')" /></a>
-      <a href="https://www.instagram.com/clitotheque" target="_blank">
+      <a href="https://www.instagram.com/clitotheque" target="_blank" alt="Instagram">
       <img width="25px" class="inline-block top-right-icon" src="@asset('images/icons/insta.svg')" /></a>
-      <a href="mailto:contact@clitotheque.org" target="_blank">
+      <a href="mailto:contact@clitotheque.org" target="_blank" alt="Email">
       <img width="25px" class="inline-block top-right-icon" src="@asset('images/icons/emailr.svg')" /></a>
     </div>
     </div>
@@ -33,11 +33,11 @@
 </div>
 
 <div class="fixed top-0 right-0 z-50">
-<img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50" src="@asset('images/icons/menu.svg')" />
+<img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50" src="@asset('images/icons/menu.svg')" alt="Menu" />
 <a href="https://www.facebook.com/Clitoth%C3%A8que-104473844947529" target="_blank">
-<img  class="hidden w-5 lg:w-6 md:inline-block top-right-icon" src="@asset('images/icons/facebook.svg')" /></a>
+<img  class="hidden w-5 lg:w-6 md:inline-block top-right-icon" src="@asset('images/icons/facebook.svg')" alt="Facebook" /></a>
 <a href="https://www.instagram.com/clitotheque" target="_blank">
-<img class="hidden w-5 lg:w-6 md:inline-block top-right-icon" src="@asset('images/icons/insta.svg')" /></a>
+<img class="hidden w-5 lg:w-6 md:inline-block top-right-icon" src="@asset('images/icons/insta.svg')" alt="Instagram" /></a>
 <a href="mailto:contact@clitotheque.org" target="_blank">
-<img class="hidden w-5 lg:w-6 md:inline-block top-right-icon-mail mr-1" src="@asset('images/icons/emailr.svg')" /></a>
+<img class="hidden w-5 lg:w-6 md:inline-block top-right-icon-mail mr-1" src="@asset('images/icons/emailr.svg')" alt="Email" /></a>
 </div>
